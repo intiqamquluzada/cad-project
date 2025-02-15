@@ -141,6 +141,7 @@ def generate_dxf(path_of_file):
             layers = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 1].values
             compositions = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 2].values
             height = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 2]
+            place = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 5]
             line_length = y_end * 10 + 50
             depth = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 3]
             column_widths = [-10, 20, 15, 15, 15, 15, 30, 100, 20, 10, 10]
@@ -153,7 +154,7 @@ def generate_dxf(path_of_file):
             draw_outer_lines(msp, line_length, depth, length_table)
             draw_columns_and_labels(msp, line_length, depth, column_widths, length_table)
             draw_layer_text(msp, line_length, depth, layers, compositions, length_table, height)
-            ident_table(msp, line_length, depth, quyu, str(quyu), length_table)
+            ident_table(msp, line_length, depth, quyu, place, length_table)
 
         # draw_table_headers(msp, y_start_table, x_current)
 
@@ -193,7 +194,10 @@ def generate_dxf(path_of_file):
 
             if olcu % 20 == 0:
                 msp.add_line(start=(-4 + x_cord_add, y_coord), end=(0 + x_cord_add, y_coord))
-                add_text(msp, idx / 20, (-8 + x_cord_add, y_olcu), bold=True)
+                if olcu / 20 == depth:
+                    add_text(msp, idx / 20, (-8 + x_cord_add, y_olcu + 2), bold=True)
+                else:
+                    add_text(msp, idx / 20, (-8 + x_cord_add, y_olcu), bold=True)
                 y_olcu -= 20
             elif olcu % 10 == 0:
                 msp.add_line(start=(-2 + x_cord_add, y_coord), end=(0 + x_cord_add, y_coord))
@@ -217,11 +221,11 @@ def generate_dxf(path_of_file):
         headers = ["Dərinilik\nMiqyas\n1:100",
                    "Geoloji\nİndeksi",
                    "Lay dabanının\nmütləq\nhündürlüyü",
-                   "   Layın  yatma\n     dərinliyi\n \n \n Dan       Dək", "Qalinliq\n   ,m",
-                   "\nSüxurların şərti\n  işarəsi",
+                   "   Layın  yatma\n     dərinliyi\n \n \n Dan            Dək", "Qalinliq\n   ,m",
+                   "\n\n  Süxurların şərti\n     işarəsi",
                    "\n \n     Süxurların litoloji təsviri",
                    "\nNümunənin\ngötürülmə\ndərinliyi,m",
-                   "Qrunt suları\n haqqında\n  məlumat\nRast  Qrunt\ngəlmə  gəlmə ",
+                   "Qrunt suları\n haqqında\n  məlumat\nRast    Qrunt\ngəlmə  gəlmə ",
                    ]
         vertical_end = line_length + depth * 20
         head_col = 0
