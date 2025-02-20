@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2460727.2841898147
+2460727.7941087964
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2460727.2841898147
+2460727.7941087964
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{B61F36ED-9432-4EBB-9209-2EB7AEA5A291}
+{0B5791B3-AE49-4735-BE25-3D8CD87C4268}
   9
 $VERSIONGUID
   2
-{01D948A4-DE53-4908-8C20-01113A4C1E3C}
+{B5F6949F-0FE6-4DA4-99BB-2A9103CE481A}
   9
 $EXTNAMES
 290
@@ -21227,7 +21227,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: ['Yanvar 2025'] 
+Qazma tarixi: Yanvar 2025 
   7
 Bold
   0
@@ -25115,7 +25115,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: ['Fevral 2025'] 
+Qazma tarixi: Fevral 2025 
   7
 Bold
   0
@@ -28483,7 +28483,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -31435,7 +31435,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -34387,7 +34387,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -37605,7 +37605,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -40823,7 +40823,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -44041,7 +44041,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -47259,7 +47259,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -50211,7 +50211,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -53429,7 +53429,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -56647,7 +56647,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -59599,7 +59599,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -62817,7 +62817,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -66035,7 +66035,7 @@ AcDbMText
  71
 1
   1
-Qazma tarixi: [] 
+Qazma tarixi:  
   7
 Bold
   0
@@ -67169,7 +67169,7 @@ DictionaryVariables
 280
 0
   1
-1.3.5 @ 2025-02-20T06:49:14.388357+00:00
+1.3.5 @ 2025-02-20T19:03:31.873711+00:00
   0
 DICTIONARYVAR
   5
@@ -67181,7 +67181,7 @@ DictionaryVariables
 280
 0
   1
-1.3.5 @ 2025-02-20T06:49:14.546772+00:00
+1.3.5 @ 2025-02-20T19:03:31.920978+00:00
   0
 ENDSEC
   0
