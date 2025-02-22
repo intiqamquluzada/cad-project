@@ -12,6 +12,13 @@ def generate_dxf(path_of_file):
     quyular = pd.read_excel(path_of_file)
     laylar = pd.read_excel(path_of_file, sheet_name="Sheet2")
 
+    def add_text(msp, text, position, height=2, bold=False, font="TimesNewRoman"):
+        mtext = msp.add_mtext(text, dxfattribs={"char_height": height, "style": font})
+        mtext.set_location(position)
+
+        if bold:
+            mtext.dxf.style = "Bold"
+
     def add_text(msp, text, position, height=2, bold=False, font="Times New Roman", color=7):
 
         doc = msp.doc
@@ -51,8 +58,6 @@ def generate_dxf(path_of_file):
         })
 
         return line, polyline
-    def add_polyline(msp, points, color=1, close=False):
-        msp.add_lwpolyline(points, close=True, dxfattribs={"color": color})
 
     def draw_open_polyline(msp, left_top, right_top, left_bottom, right_bottom, color=1):
         add_line(msp, left_bottom, left_top, color=color)
@@ -365,12 +370,6 @@ def generate_dxf(path_of_file):
         add_text(msp, headers[8], (sum(column_widths[:9]) + 1 + x_cord_add, vertical_end + 28), height=1.6, bold=True,
                  font="Times New Roman")
 
-    def draw_layer_lines(msp, line_length, depth, layers, x_cord_add):
-        vertical_end = line_length + depth * 20
-        for layer in layers:
-            y_coord = vertical_end - layer * 20
-            add_line(msp, start=(0 + x_cord_add, y_coord), end=(220 + x_cord_add, y_coord))
-
     def draw_layer_text(msp, line_length, depth, layers, compositions, x_cord_add, height):
         vertical_end = line_length + depth * 10
         previous_layer = 0
@@ -388,6 +387,7 @@ def generate_dxf(path_of_file):
             add_text(msp, layer, (34 + x_cord_add, y_coord + 2), bold=True)
             add_text(msp, layer - previous_layer, (44 + x_cord_add, y_coord_text), bold=True)
             add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
+            previous_layer = layer
 
     def add_vertical_text(msp, text, position, bold=False, font="Times New Roman", char_height=2):
 
