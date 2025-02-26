@@ -37,10 +37,23 @@ def generate_dxf(path_of_file):
 
         return mtext
 
-    def add_line(msp, start, end, color=7, layer=None):
-        attributes = {"color": color}
-        if layer:
-            attributes["layer"] = layer
+    def add_line(msp, start, end, layer="Default", color=None):
+        """
+        ByLayer və ya xüsusi rənglə xətt çəkən funksiya.
+        """
+        if not layer:
+            layer = "Default"
+
+        if layer not in msp.doc.layers:
+            msp.doc.layers.add(name=layer)
+
+        # Dxf atributlarını yarat
+        attributes = {"layer": layer}
+
+        # Əgər rəng təyin edilibsə, əlavə edək
+        if color is not None:
+            attributes["color"] = color
+
         msp.add_line(start=start, end=end, dxfattribs=attributes)
 
     def add_line_scale(msp, start, end, color=7, layer=None, thickness=0.3):
@@ -66,9 +79,9 @@ def generate_dxf(path_of_file):
 
     def draw_vertical_scale(msp, y_start, y_end, previous_x, quyu_miqyas_horizontal, min_value, max_value):
         add_line_scale(msp, (0 + previous_x, y_start * quyu_miqyas_horizontal),
-                       (0 + previous_x, y_end * quyu_miqyas_horizontal), layer="MyLayer", thickness=3)
+                       (0 + previous_x, y_end * quyu_miqyas_horizontal), layer="MyLayer", thickness=0.3)
         add_line_scale(msp, (-0.6 + previous_x, y_start * quyu_miqyas_horizontal),
-                       (-0.6 + previous_x, y_end * quyu_miqyas_horizontal), layer="MyLayer", thickness=3)
+                       (-0.6 + previous_x, y_end * quyu_miqyas_horizontal), layer="MyLayer", thickness=0.3)
         y_pos_n = 0
         for i in range(y_end - y_start + 1):
 
@@ -78,19 +91,21 @@ def generate_dxf(path_of_file):
             if (y_start + i % 2 == 0) and (i != 0):
                 p = (y_start + i - 1) * quyu_miqyas_horizontal
                 bold_line_horizontal(msp, (-0.3 + previous_x, y_pos), (-0.3 + previous_x, y_pos_n), 6)
-            add_line_scale(msp, (-3 + previous_x, y_pos), (0 + previous_x, y_pos), layer="MyLayer", thickness=3)
-            add_line_scale(msp, (-1.5 + previous_x, y_pos_2), (0 + previous_x, y_pos_2), layer="MyLayer", thickness=3)
+            add_line_scale(msp, (-3 + previous_x, y_pos), (0 + previous_x, y_pos), layer="MyLayer", thickness=0.3)
+            if y_end - y_start + 1 <= i:
+                add_line_scale(msp, (-1.5 + previous_x, y_pos_2), (0 + previous_x, y_pos_2), layer="MyLayer",
+                               thickness=0.3)
             add_text(msp, f"{qiymet:.1f}", (-12 + previous_x, y_pos + 1))
             y_pos_n = y_pos
         add_text(msp, "H, m", (-3 + previous_x, y_pos + 5), height=3)
 
     def draw_table_lines(msp, x_current, y_start_table, quyu, scale_factor_vertical):
-        add_line(msp, (x_current, y_start_table - 24), (x_current, y_start_table - 17), layer="line_layer")
-        add_line(msp, (x_current, y_start_table - 16), (x_current, y_start_table - 17), layer="line_layer")
-        add_line(msp, (x_current, y_start_table - 10), (x_current, y_start_table - 11), layer="line_layer")
-        add_line(msp, (x_current, y_start_table - 3), (x_current, y_start_table - 4), layer="line_layer")
+        add_line(msp, (x_current, y_start_table - 24), (x_current, y_start_table - 17), layer="MyLayer")
+        add_line(msp, (x_current, y_start_table - 16), (x_current, y_start_table - 17), layer="MyLayer")
+        add_line(msp, (x_current, y_start_table - 10), (x_current, y_start_table - 11), layer="MyLayer")
+        add_line(msp, (x_current, y_start_table - 3), (x_current, y_start_table - 4), layer="MyLayer")
         if quyu[4] == 0:
-            add_line(msp, (x_current - 8, y_start_table - 24), (x_current - 8, y_start_table + 3), layer="line_layer")
+            add_line(msp, (x_current - 8, y_start_table - 24), (x_current - 8, y_start_table + 3), layer="MyLayer")
         else:
             add_text(msp, f"{quyu[4]: .1f}", (x_current - ((quyu[4]) * scale_factor_vertical / 2), y_start_table - 19))
 
@@ -107,14 +122,15 @@ def generate_dxf(path_of_file):
         horizontal_lines = [3, -4, -11, -17, -24]
         for offset in horizontal_lines:
             add_line(msp, (-5 + x_cord_ad, y_start_table + offset), (x_end + 10, y_start_table + offset),
-                     layer="line_layer")
+                     layer="MyLayer")
 
-        add_line(msp, (-5 + x_cord_ad, y_start_table + 3), (-5 + x_cord_ad, y_start_table - 24), layer="line_layer")
-        add_line(msp, (x_end + 10, y_start_table + 3), (x_end + 10, y_start_table - 24), layer="line_layer")
+        add_line(msp, (-5 + x_cord_ad, y_start_table + 3), (-5 + x_cord_ad, y_start_table - 24), layer="MyLayer")
+        add_line(msp, (x_end + 10, y_start_table + 3), (x_end + 10, y_start_table - 24), layer="MyLayer")
 
     def geoloji_kesilis_yarat(quyular):
         doc = ezdxf.new("R2007")
         msp = doc.modelspace()
+        doc.header["$LWDISPLAY"] = 1
 
         max_yuksek = max((quyular.iloc[:, 2]) * (1000 / quyular.iloc[:, 7]))
         min_derinlik = min((quyular.iloc[:, 2] - quyular.iloc[:, 3]) * (1000 / quyular.iloc[:, 7]))
@@ -158,9 +174,9 @@ def generate_dxf(path_of_file):
             y_bottom = (y_end - (
                         int(max_yuksek) + 2 - (quyu_kes.iloc[0, 2] - quyu_kes.iloc[0, 3]))) * quyu_miqyas_horizontal
 
-            add_line(msp, (previous_x - 11, y_top), (previous_x - 1, y_top), layer="line_layer")
-            add_line(msp, (previous_x - 11, y_bottom - 2), (previous_x, y_bottom - 2), layer="line_layer")
-            add_line(msp, (previous_x - 11, y_bottom - 2), (previous_x - 11, y_top), layer="line_layer")
+            add_line(msp, (previous_x - 11, y_top), (previous_x - 1, y_top), layer="MyLayer")
+            add_line(msp, (previous_x - 11, y_bottom - 2), (previous_x, y_bottom - 2), layer="MyLayer")
+            add_line(msp, (previous_x - 11, y_bottom - 2), (previous_x - 11, y_top), layer="MyLayer")
             x_cord_add = previous_x
 
             for index, quyu in quyu_kes.iterrows():
@@ -190,6 +206,8 @@ def generate_dxf(path_of_file):
                 add_text(msp, f"{quyu[2]}", (x_current - 3, y_start_table - 7))
                 add_text(msp, f"{quyu[3]: .1f}", (x_current - 3, y_start_table - 13))
 
+                # draw_line_with_weight(msp,0,100,y_start_table- 40,70)
+
                 draw_table_lines(msp, x_current, y_start_table, quyu, scale_factor_vertical)
 
                 previous_top = (x_current + 1, y_top)
@@ -198,9 +216,9 @@ def generate_dxf(path_of_file):
                 previous_x = x_current
             if idx == 0:
                 x2 = 0
-            add_line(msp, (x_current + 1, y_top), (x_current + 10, y_top), layer="line_layer")
-            add_line(msp, (x_current, y_bottom - 2), (x_current + 10, y_bottom - 2), layer="line_layer")
-            add_line(msp, (x_current + 10, y_bottom - 2), (x_current + 10, y_top), layer="line_layer")
+            add_line(msp, (x_current + 1, y_top), (x_current + 10, y_top), layer="MyLayer")
+            add_line(msp, (x_current, y_bottom - 2), (x_current + 10, y_bottom - 2), layer="MyLayer")
+            add_line(msp, (x_current + 10, y_bottom - 2), (x_current + 10, y_top), layer="MyLayer")
             add_text(msp, f"{kesilis} xətti üzrə geoloji-litoloji kəsiliş",
                      (x_current - (x_current - x2) / 2, y_end * scale_factor_horizontal + 19), height=3, bold=True,
                      font="Times New Roman")
@@ -209,7 +227,7 @@ def generate_dxf(path_of_file):
                      font="Times New Roman")
             add_text(msp, f"                 şaquli: 1:{scale_horizontal}",
                      (x_current - (x_current - x2) / 2, y_end * scale_factor_horizontal + 10), height=3, bold=True,
-                     font="TimesNewRoman")
+                     font="Times New Roman")
             x2 = x_current
             if idx == 0:
                 draw_table_headers(msp, y_start_table, x_current, 0)
@@ -252,18 +270,18 @@ def generate_dxf(path_of_file):
         return dxf_file_path
 
     def ident_table(msp, line_length, depth, name, place, height, date, x_cord_add):
-        y_table_start = line_length + depth * 10 + 30
-        y_table_end = line_length + depth * 10 + 52
+        y_table_start = line_length + depth * 10 + 27
+        y_table_end = line_length + depth * 10 + 49
 
-        add_text(msp, name, ((170 - len(name)) / 2 + x_cord_add, y_table_end - 2), 2, bold=True, font="Times New Roman")
-        add_text(msp, f"Obyekt: {place}", ((170 - len(place) - 8) / 2 + x_cord_add, y_table_end - 7), 2, bold=True,
+        add_text(msp, name, ((160 - len(name)) / 2 + x_cord_add, y_table_end - 2), 2, bold=True, font="Times New Roman")
+        add_text(msp, f"Obyekt: {place}", ((160 - len(place) - 8) / 2 + x_cord_add, y_table_end - 7), 2, bold=True,
                  font="Times New Roman")
-        add_text(msp, f"Quyunun dərinliyi: {depth} m", (10 + x_cord_add, y_table_end - 12), 2, bold=True,
+        add_text(msp, f"Quyunun dərinliyi: {depth} m", (10 + x_cord_add, y_table_end - 12), 2.3, bold=True,
                  font="Times New Roman")
-        add_text(msp, "Qazma diametri: 132 mm", (10 + x_cord_add, y_table_end - 17), 2, bold=True)
-        add_text(msp, f"Quyu ağzının mütləq yüksəkliyi: {height} m", (95 + x_cord_add, y_table_end - 12), 2, bold=True,
-                 font="Times New Roman")
-        add_text(msp, f"Qazma tarixi: {date} ", (95 + x_cord_add, y_table_end - 17), 2, bold=True,
+        add_text(msp, "Qazma diametri: 132 mm", (10 + x_cord_add, y_table_end - 17), 2.3, bold=True)
+        add_text(msp, f"Quyu ağzının mütləq yüksəkliyi: {height} m", (95 + x_cord_add, y_table_end - 12), 2.3,
+                 bold=True, font="Times New Roman")
+        add_text(msp, f"Qazma tarixi: {date} ", (95 + x_cord_add, y_table_end - 17), 2.3, bold=True,
                  font="Times New Roman")
 
         borders = [
@@ -273,38 +291,41 @@ def generate_dxf(path_of_file):
             ((172 + x_cord_add, y_table_start), (172 + x_cord_add, y_table_end)),
         ]
         for start, end in borders:
-            add_line(msp, start=start, end=end)
+            add_line(msp, start=start, end=end, layer="MyLayer")
 
     def water_line(msp, line_length, depth, water, water_qrunt, x_cord_add):
         vertical_end = line_length + depth * 10
 
         for wat in water:
             y_coord = vertical_end - wat * 10
-            bold_line_vertical(msp, start=(155 + x_cord_add, y_coord), end=(163.5 + x_cord_add, y_coord), bold=3,
-                               color=5)
+            add_line_scale(msp, start=(155 + x_cord_add, y_coord), end=(163.5 + x_cord_add, y_coord), color=5,
+                           thickness=0.3)
+            # bold_line_vertical(msp, start=(155+x_cord_add, y_coord), end=(163.5+x_cord_add, y_coord),bold=3,color=5)
             add_text(msp, wat, (157.5 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
         for wat in water_qrunt:
             y_coord = vertical_end - wat * 10
-            bold_line_vertical(msp, start=(163.5 + x_cord_add, y_coord), end=(172 + x_cord_add, y_coord), bold=3,
-                               color=5)
+            add_line_scale(msp, start=(163.5 + x_cord_add, y_coord), end=(172 + x_cord_add, y_coord), color=5,
+                           thickness=0.3)
+            # bold_line_vertical(msp, start=(163.5+x_cord_add, y_coord), end=(172+x_cord_add, y_coord),bold=3,color=5)
             add_text(msp, wat, (166 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
 
     def draw_vertical_lines(msp, line_length, depth, x_cord_add):
         start_point = (0 + x_cord_add, line_length)
         end_point = (0 + x_cord_add, line_length + depth * 10)
-        bold_line_horizontal(msp, (0 + x_cord_add, line_length - 2), (0 + x_cord_add, line_length + depth * 10), 3)
-        msp.add_line(start_point, end_point)
+        # bold_line_horizontal(msp,(0+x_cord_add, line_length-2),(0+x_cord_add, line_length + depth * 10),3)
+        add_line_scale(msp, start_point, end_point, thickness=0.3)
 
         y_olcu = line_length + depth * 10
         for idx, olcu in enumerate(range(depth * 10 + 1)):
             y_coord = line_length + olcu
 
             if olcu % 10 == 0:
-                bold_line_vertical(msp, (-3 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), 3)
-                if olcu / 10 == depth:
+                # bold_line_vertical(msp,(-3+x_cord_add, y_coord),(0+x_cord_add, y_coord),3)
+                add_line_scale(msp, (-3 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), thickness=0.3)
+                if olcu / 10 == 0:
                     add_text(msp, idx / 10, (-8 + x_cord_add, y_olcu), bold=True)
                 else:
-                    add_text(msp, idx / 10, (-8 + x_cord_add, y_olcu), bold=True)
+                    add_text(msp, idx / 10, (-8 + x_cord_add, y_olcu + 1), bold=True)
                 y_olcu -= 10
             elif olcu % 5 == 0:
                 msp.add_line(start=(-1.5 + x_cord_add, y_coord), end=(0 + x_cord_add, y_coord))
@@ -314,26 +335,26 @@ def generate_dxf(path_of_file):
     def draw_outer_lines(msp, line_length, depth, x_cord_add):
         vertical_end = line_length + depth * 10
         borders = [
-            ((-10 + x_cord_add, line_length - 2), (172 + x_cord_add, line_length - 2)),
+            ((-10 + x_cord_add, line_length - 1), (172 + x_cord_add, line_length - 1)),
             ((0 + x_cord_add, line_length), (172 + x_cord_add, line_length)),
             ((-10 + x_cord_add, vertical_end), (172 + x_cord_add, vertical_end)),
             ((-10 + x_cord_add, vertical_end + 7), (172 + x_cord_add, vertical_end + 7)),
-            ((172 + x_cord_add, line_length), (172 + x_cord_add, vertical_end + 27)),
-            ((-10 + x_cord_add, vertical_end + 27), (172 + x_cord_add, vertical_end + 27)),
+            ((172 + x_cord_add, line_length), (172 + x_cord_add, vertical_end + 23)),
+            ((-10 + x_cord_add, vertical_end + 23), (172 + x_cord_add, vertical_end + 23)),
         ]
         for start, end in borders:
-            add_line(msp, start=start, end=end)
+            add_line(msp, start=start, end=end, layer="MyLayer")
 
     def draw_columns_and_labels(msp, line_length, depth, column_widths, x_cord_add):
         col = 0
         headers = ["Dərinilik\nMiqyas\n1:100",
                    "Geoloji\nİndeksi",
                    "Lay dabanının\nmütləq\nhündürlüyü",
-                   "Layın  yatma\n   dərinliyi\n \n \n Dan      Dək", "Qalinliq\n   ,m",
+                   "Layın  yatma\n   dərinliyi \n \n Dan      Dək", "Qalinliq\n   ,m",
                    "\n\nSüxurların şərti\n      işarəsi",
                    "\n   Süxurların litoloji təsviri",
                    "\nNümunənin\n götürülmə\ndərinliyi,m",
-                   " \nQrunt suları\n  haqqında\n   məlumat\nRast   Qərar-\ngəlmə laşma,\n              m ",
+                   " Qrunt suları\n  haqqında\n   məlumat\nRast   Qərar-\ngəlmə laşma,\n              m ",
                    ]
         vertical_end = line_length + depth * 10
         head_col = 0
@@ -344,30 +365,32 @@ def generate_dxf(path_of_file):
             if idx != 2:
                 add_text(msp, idx, (col_text - 1 + x_cord_add, vertical_end + 4))
             if (idx == 4) | (idx == 10):
-                add_line(msp, start=(col + x_cord_add, line_length - 2), end=(col + x_cord_add, vertical_end + 18))
-                add_line(msp, start=(col - width + x_cord_add, vertical_end + 18),
-                         end=(col + width + x_cord_add, vertical_end + 18))
+                add_line(msp, start=(col + x_cord_add, line_length - 1), end=(col + x_cord_add, vertical_end + 14),
+                         layer="MyLayer")
+                add_line(msp, start=(col - width + x_cord_add, vertical_end + 14),
+                         end=(col + width + x_cord_add, vertical_end + 14), layer="MyLayer")
             else:
-                add_line(msp, start=(col + x_cord_add, line_length - 2), end=(col + x_cord_add, vertical_end + 27))
-        add_line(msp, start=(0 + x_cord_add, vertical_end), end=(0 + x_cord_add, vertical_end + 27))
+                add_line(msp, start=(col + x_cord_add, line_length - 1), end=(col + x_cord_add, vertical_end + 23),
+                         layer="MyLayer")
+        add_line(msp, start=(0 + x_cord_add, vertical_end), end=(0 + x_cord_add, vertical_end + 23))
         add_text(msp, 2, (5 + x_cord_add, vertical_end + 4))
 
-        add_vertical_text(msp, headers[0], (column_widths[0] + 1 + x_cord_add, vertical_end + 11), bold=True,
+        add_vertical_text(msp, headers[0], (column_widths[0] + 1 + x_cord_add, vertical_end + 9), bold=True,
                           font="Times New Roman")
         add_vertical_text(msp, headers[1], (1 + x_cord_add, vertical_end + 11), bold=True, font="Times New Roman")
-        add_vertical_text(msp, headers[2], (sum(column_widths[:2]) + 1 + x_cord_add, vertical_end + 11), bold=True,
+        add_vertical_text(msp, headers[2], (sum(column_widths[:2]) + 1 + x_cord_add, vertical_end + 8), bold=True,
                           font="Times New Roman", char_height=1.5)
-        add_text(msp, headers[3], (sum(column_widths[:3]) + 1 + x_cord_add, vertical_end + 26), bold=True,
+        add_text(msp, headers[3], (sum(column_widths[:3]) + 1 + x_cord_add, vertical_end + 22), bold=True,
                  font="Times New Roman")
-        add_vertical_text(msp, headers[4], (sum(column_widths[:5]) + 1 + x_cord_add, vertical_end + 11), bold=True,
+        add_vertical_text(msp, headers[4], (sum(column_widths[:5]) + 1 + x_cord_add, vertical_end + 8), bold=True,
                           font="Times New Roman")
-        add_text(msp, headers[5], (sum(column_widths[:6]) + 1 + x_cord_add, vertical_end + 26), bold=True,
+        add_text(msp, headers[5], (sum(column_widths[:6]) + 1 + x_cord_add, vertical_end + 22), bold=True,
                  font="Times New Roman")
-        add_text(msp, headers[6], (sum(column_widths[:7]) + 1 + x_cord_add, vertical_end + 26), height=3, bold=True,
+        add_text(msp, headers[6], (sum(column_widths[:7]) + 1 + x_cord_add, vertical_end + 22), height=3, bold=True,
                  font="Times New Roman")
-        add_text(msp, headers[7], (sum(column_widths[:8]) + 1 + x_cord_add, vertical_end + 26), bold=True,
+        add_text(msp, headers[7], (sum(column_widths[:8]) + 1 + x_cord_add, vertical_end + 22), bold=True,
                  font="Times New Roman")
-        add_text(msp, headers[8], (sum(column_widths[:9]) + 1 + x_cord_add, vertical_end + 28), height=1.6, bold=True,
+        add_text(msp, headers[8], (sum(column_widths[:9]) + 1 + x_cord_add, vertical_end + 23), height=1.6, bold=True,
                  font="Times New Roman")
 
     def draw_layer_text(msp, line_length, depth, layers, compositions, x_cord_add, height):
@@ -383,11 +406,14 @@ def generate_dxf(path_of_file):
 
             add_line(msp, start=(0 + x_cord_add, y_coord), end=(155 + x_cord_add, y_coord))
             add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
-            add_text(msp, previous_layer, (24 + x_cord_add, vertical_end - previous_layer * 10 - 1), bold=True)
-            add_text(msp, layer, (34 + x_cord_add, y_coord + 2), bold=True)
-            add_text(msp, layer - previous_layer, (44 + x_cord_add, y_coord_text), bold=True)
+            add_text(msp, "{:.1f}".format(previous_layer), (24 + x_cord_add, vertical_end - previous_layer * 10 - 1),
+                     bold=True)
+            add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
+            add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
             add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
             previous_layer = layer
+        add_text(msp, "{:.1f}".format(depth), (34 + x_cord_add, line_length + 2), bold=True)
+        add_text(msp, "{:.1f}".format(height - depth), (13 + x_cord_add, line_length + 2), bold=True)
 
     def add_vertical_text(msp, text, position, bold=False, font="Times New Roman", char_height=2):
 
@@ -413,5 +439,6 @@ def generate_dxf(path_of_file):
         for i in range(1, bold * 10 + 1):
             msp.add_line(start=(start[0] + x, start[1]), end=(end[0] + x, end[1]))
             x += 0.01
+
 
     return geoloji_kesilis_yarat(quyular)
