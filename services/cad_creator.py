@@ -227,7 +227,7 @@ def generate_dxf(path_of_file):
 
                 add_text(msp, f"{quyu[1]}", (x_current + 1, y_top + 9), height=3)
                 add_text(msp, f"{quyu[2]:.1f}", (x_current + 1, y_top + 5), height=3)
-                add_text(msp, f"{"{:.1f}".format(quyu[3])}", (x_current + 1, y_bottom + 1), height=2)
+                add_text(msp, f"{'{:.1f}'.format(quyu[3])}", (x_current + 1, y_bottom + 1), height=2)
                 add_line(msp, (x_current, y_top), (x_current, y_top + 5.5), color=7, bold=True)
                 add_line(msp, (x_current + len(quyu[1]) * 2 + 1, y_top + 5.5), (x_current, y_top + 5.5), color=7,
                          bold=True)
@@ -308,10 +308,10 @@ def generate_dxf(path_of_file):
         add_text(msp, name, ((160 - len(name)) / 2 + x_cord_add, y_table_end - 2), 2, bold=True, font="Times New Roman")
         add_text(msp, f"Obyekt: {place}", ((160 - len(place) - 8) / 2 + x_cord_add, y_table_end - 7), 2, bold=True,
                  font="Times New Roman")
-        add_text(msp, f"Quyunun dərinliyi: {"{:.1f}".format(depth)} m", (10 + x_cord_add, y_table_end - 12), 2.3,
+        add_text(msp, f"Quyunun dərinliyi: {'{:.1f}'.format(depth)} m", (10 + x_cord_add, y_table_end - 12), 2.3,
                  bold=True, font="Times New Roman")
         add_text(msp, "Qazma diametri: 132 mm", (10 + x_cord_add, y_table_end - 17), 2.3, bold=True)
-        add_text(msp, f"Quyu ağzının mütləq yüksəkliyi: {"{:.1f}".format(height)} m",
+        add_text(msp, f"Quyu ağzının mütləq yüksəkliyi: {'{:.1f}'.format(height)} m",
                  (95 + x_cord_add, y_table_end - 12), 2.3, bold=True, font="Times New Roman")
         add_text(msp, f"Qazma tarixi: {date} ", (95 + x_cord_add, y_table_end - 17), 2.3, bold=True,
                  font="Times New Roman")
