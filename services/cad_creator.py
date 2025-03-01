@@ -12,13 +12,6 @@ def generate_dxf(path_of_file):
     quyular = pd.read_excel(path_of_file)
     laylar = pd.read_excel(path_of_file, sheet_name="Sheet2")
 
-    def add_text(msp, text, position, height=2, bold=False, font="TimesNewRoman"):
-        mtext = msp.add_mtext(text, dxfattribs={"char_height": height, "style": font})
-        mtext.set_location(position)
-
-        if bold:
-            mtext.dxf.style = "Bold"
-
     def add_text(msp, text, position, height=2, bold=False, font="Times New Roman", color=7):
 
         doc = msp.doc
@@ -121,7 +114,7 @@ def generate_dxf(path_of_file):
             add_line_scale(msp, (-3 + previous_x, y_pos), (0 + previous_x, y_pos), layer="MyLayer", thickness=0.3)
             if i > 0:
                 add_line(msp, (-1.5 + previous_x, y_pos_2), (0 + previous_x, y_pos_2), bold=True, width=0.3)
-            add_text(msp, f"{qiymet:.1f}", (-12 + previous_x, y_pos + 1))
+            add_text(msp, f"{qiymet:.1f}", (-9 + previous_x, y_pos + 1))
             y_pos_n = y_pos
         add_text(msp, "H, m", (-3 + previous_x, y_pos + 5), height=3)
 
@@ -201,7 +194,7 @@ def generate_dxf(path_of_file):
 
             y_top = (y_end - (int(max_yuksek) + 2 - quyu_kes.iloc[0, 2])) * quyu_miqyas_horizontal
             y_bottom = (y_end - (
-                    int(max_yuksek) + 2 - (quyu_kes.iloc[0, 2] - quyu_kes.iloc[0, 3]))) * quyu_miqyas_horizontal
+                        int(max_yuksek) + 2 - (quyu_kes.iloc[0, 2] - quyu_kes.iloc[0, 3]))) * quyu_miqyas_horizontal
 
             add_line(msp, (previous_x - 11, y_top), (previous_x - 1, y_top), layer="MyLayer", bold=True)
             add_line(msp, (previous_x - 11, y_bottom - 2), (previous_x, y_bottom - 2), layer="MyLayer", bold=True)
@@ -266,7 +259,7 @@ def generate_dxf(path_of_file):
             else:
                 draw_table_headers(msp, y_start_table, x_current, x_cord_add - 22)
 
-        quyu_layers = quyular.iloc[:, 1].unique().tolist()
+        quyu_layers = laylar.iloc[:, 0].unique().tolist()
 
         for index, quyu in enumerate(quyu_layers):
             layers = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 1].values
@@ -353,9 +346,9 @@ def generate_dxf(path_of_file):
                 # bold_line_vertical(msp,(-3+x_cord_add, y_coord),(0+x_cord_add, y_coord),3)
                 add_line(msp, (-3 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
                 if olcu / 10 == 0:
-                    add_text(msp, idx / 10, (-9 + x_cord_add, y_olcu), bold=True)
+                    add_text(msp, idx / 10, (-8 + x_cord_add, y_olcu), bold=True)
                 else:
-                    add_text(msp, idx / 10, (-9 + x_cord_add, y_olcu + 1), bold=True)
+                    add_text(msp, idx / 10, (-8 + x_cord_add, y_olcu + 1), bold=True)
                 y_olcu -= 10
             elif olcu % 5 == 0:
                 add_line(msp, (-1.5 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
@@ -438,10 +431,13 @@ def generate_dxf(path_of_file):
             add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
             add_text(msp, "{:.1f}".format(previous_layer), (24 + x_cord_add, vertical_end - previous_layer * 10 - 1),
                      bold=True)
+            add_text(msp, "{:.1f}".format(layer), (24 + x_cord_add, y_coord - 1), bold=True)
             add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
             add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
             add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
             previous_layer = layer
+        y_coord_text = vertical_end - 10 * (depth - (depth - layer) / 2)
+        add_text(msp, "{:.1f}".format(depth - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
         add_text(msp, "{:.1f}".format(depth), (34 + x_cord_add, line_length + 2), bold=True)
         add_text(msp, "{:.1f}".format(height - depth), (13 + x_cord_add, line_length + 2), bold=True)
 
