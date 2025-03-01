@@ -30,29 +30,6 @@ def generate_dxf(path_of_file):
 
         return mtext
 
-    # def add_line(msp, start, end, color=7, layer=None):
-    #     attributes = {"color": color}
-    #     if layer:
-    #         attributes["layer"] = layer
-    #     msp.add_line(start=start, end=end, dxfattribs=attributes)
-
-    # def add_line(msp, start, end, layer="Default", color=None):
-    #     """
-    #     ByLayer və ya xüsusi rənglə xətt çəkən funksiya.
-    #     """
-    #     if not layer:
-    #         layer = "Default"
-
-    #     if layer not in msp.doc.layers:
-    #         msp.doc.layers.add(name=layer)
-
-    #     attributes = {"layer": layer}
-
-    #     if color is not None:
-    #         attributes["color"] = color
-
-    #     msp.add_line(start=start, end=end, dxfattribs=attributes)
-
     def add_line(msp, start, end, layer="Default", color=None, bold=False, width=0.12):
         """
         ByLayer və ya xüsusi rənglə xətt çəkən funksiya.
@@ -154,8 +131,8 @@ def generate_dxf(path_of_file):
         doc.header["$LWDISPLAY"] = 1
         doc.header["$CELWEIGHT"] = 13
 
-        max_yuksek = max((quyular.iloc[:, 2]) * (1000 / quyular.iloc[:, 7]))
-        min_derinlik = min((quyular.iloc[:, 2] - quyular.iloc[:, 3]) * (1000 / quyular.iloc[:, 7]))
+        max_yuksek = max((quyular.iloc[:, 2]) * (1000 / quyular.iloc[:, 6]))
+        min_derinlik = min((quyular.iloc[:, 2] - quyular.iloc[:, 3]) * (1000 / quyular.iloc[:, 6]))
         max_yukseklik = max_yuksek - min_derinlik
         min_yukseklik = 0
         y_length = int(max_yukseklik) + 2
@@ -166,11 +143,11 @@ def generate_dxf(path_of_file):
         previous_x = x_pos
 
         quyu_kesilis = quyular.iloc[:, 0].unique().tolist()
-        quyu_miqyas_horizontal = quyular.iloc[:, 7].unique().tolist()
+        quyu_miqyas_horizontal = quyular.iloc[:, 6].unique().tolist()
 
         for idx, kesilis in enumerate(quyu_kesilis):
             quyu_kes = quyular[quyular.iloc[:, 0] == kesilis]
-            quyu_miqyas_horizontal = quyu_kes.iloc[:, 7].unique().tolist()
+            quyu_miqyas_horizontal = quyu_kes.iloc[:, 6].unique().tolist()
             previous_top = None
             previous_bottom = None
             quyu_miqyas_horizontal = 1000 / quyu_miqyas_horizontal[0]
@@ -202,10 +179,10 @@ def generate_dxf(path_of_file):
             x_cord_add = previous_x
 
             for index, quyu in quyu_kes.iterrows():
-                scale_factor_vertical = 1000 / quyu[6]
-                scale_factor_horizontal = 1000 / quyu[7]
-                scale_vertical = quyu[6]
-                scale_horizontal = quyu[7]
+                scale_factor_vertical = 1000 / quyu[5]
+                scale_factor_horizontal = 1000 / quyu[6]
+                scale_vertical = quyu[5]
+                scale_horizontal = quyu[6]
 
                 y_top = (y_end - (int(max_yuksek) + 2 - quyu[2])) * scale_factor_horizontal
                 y_bottom = (y_end - (int(max_yuksek) + 2 - (quyu[2] - quyu[3]))) * scale_factor_horizontal
@@ -266,11 +243,11 @@ def generate_dxf(path_of_file):
             water = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 3].values
             water_qrunt = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 4].values
             compositions = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 2].values
-            height = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 2]
-            place = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 5]
+            height = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 7]
+            place = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 6]
             date = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 5].unique()
             line_length = y_length + 50
-            depth = quyular[quyular.iloc[:, 1] == quyu].iloc[0, 3]
+            depth = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 8]
             # column_widths = [-10, 20, 15, 15, 15, 15, 30, 100, 20, 10, 10]
             column_widths = [-10, 20, 10.5, 10.5, 10.5, 10.5, 24.4, 60.6, 18, 8.5, 8.5]
             if index == 0:
