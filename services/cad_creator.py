@@ -225,8 +225,8 @@ def generate_dxf(path_of_file):
                     add_line(msp, previous_bottom, (x_current, y_bottom - 2), color=7, bold=True)
 
                 add_text(msp, f"{quyu[1]}", (x_current + 1, y_top + 9), height=3)
-                add_text(msp, f"{"{:.1f}".format(quyu[2])}", (x_current + 1, y_top + 5), height=3)
-                add_text(msp, f"{"{:.1f}".format(quyu[3])}", (x_current + 2, y_bottom + 1), height=2)
+                add_text(msp, f"{'{:.1f}'.format(quyu[2])}", (x_current + 1, y_top + 5), height=3)
+                add_text(msp, f"{'{:.1f}'.format(quyu[3])}", (x_current + 2, y_bottom + 1), height=2)
                 add_line(msp, (x_current, y_top), (x_current, y_top + 5.5), color=7, bold=True)
                 add_line(msp, (x_current + len(quyu[1]) * 2 + 1, y_top + 5.5), (x_current, y_top + 5.5), color=7,
                          bold=True)
@@ -335,7 +335,7 @@ def generate_dxf(path_of_file):
             add_text(msp, wat, (157.5 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
         for wat in water_qrunt:
             y_coord = vertical_end - wat * 10
-            add_line(msp, (163.5 + x_cord_add, y_coord), (172 + x_cord_add, y_coord), bold=True, width=0.3)
+            add_line(msp, (163.5 + x_cord_add, y_coord), (172 + x_cord_add, y_coord), bold=True, width=0.3, color=5)
             # bold_line_vertical(msp, start=(163.5+x_cord_add, y_coord), end=(172+x_cord_add, y_coord),bold=3,color=5)
             add_text(msp, wat, (166 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
 
