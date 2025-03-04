@@ -296,18 +296,19 @@ def generate_dxf(path_of_file):
 
     def water_line(msp, line_length, depth, water, water_qrunt, x_cord_add):
         vertical_end = line_length + depth * 10
-
-        for wat in water:
-            y_coord = vertical_end - wat * 10
-            add_line(msp, start=(155 + x_cord_add, y_coord), end=(163.5 + x_cord_add, y_coord), color=5, bold=True,
-                     width=0.3)
-            # bold_line_vertical(msp, start=(155+x_cord_add, y_coord), end=(163.5+x_cord_add, y_coord),bold=3,color=5)
-            add_text(msp, wat, (157.5 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
-        for wat in water_qrunt:
-            y_coord = vertical_end - wat * 10
-            add_line(msp, (163.5 + x_cord_add, y_coord), (172 + x_cord_add, y_coord), bold=True, width=0.3, color=5)
-            # bold_line_vertical(msp, start=(163.5+x_cord_add, y_coord), end=(172+x_cord_add, y_coord),bold=3,color=5)
-            add_text(msp, wat, (166 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
+        if water is not None:
+            for wat in water:
+                y_coord = vertical_end - wat * 10
+                add_line(msp, start=(155 + x_cord_add, y_coord), end=(163.5 + x_cord_add, y_coord), color=5, bold=True,
+                         width=0.3)
+                # bold_line_vertical(msp, start=(155+x_cord_add, y_coord), end=(163.5+x_cord_add, y_coord),bold=3,color=5)
+                add_text(msp, wat, (157.5 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
+        if water_qrunt is not None:
+            for wat in water_qrunt:
+                y_coord = vertical_end - wat * 10
+                add_line(msp, (163.5 + x_cord_add, y_coord), (172 + x_cord_add, y_coord), bold=True, width=0.3, color=5)
+                # bold_line_vertical(msp, start=(163.5+x_cord_add, y_coord), end=(172+x_cord_add, y_coord),bold=3,color=5)
+                add_text(msp, wat, (166 + x_cord_add, y_coord + 3), bold=True, font="Times New Roman", color=5)
 
     def draw_vertical_lines(msp, line_length, depth, x_cord_add):
         start_point = (0 + x_cord_add, line_length)
@@ -398,25 +399,35 @@ def generate_dxf(path_of_file):
         previous_layer = 0
         for layer, composition in zip(layers, compositions):
             y_coord = vertical_end - layer * 10
-            y_coord_text = vertical_end - 10 * (layer - (layer - previous_layer) / 2)
+            if layer >= 0.30:
+                y_coord_text = vertical_end - 10 * (layer - (layer - previous_layer) / 2)
+            else:
+                y_coord_text = vertical_end
             if height >= 0:
                 text = round(height - layer, 2)
             else:
                 text = round(height + layer, 2)
-
-            add_line(msp, start=(0 + x_cord_add, y_coord), end=(155 + x_cord_add, y_coord), bold=True)
-            add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
-            add_text(msp, "{:.1f}".format(previous_layer), (24 + x_cord_add, vertical_end - previous_layer * 10 - 1),
-                     bold=True)
-            add_text(msp, "{:.1f}".format(layer), (24 + x_cord_add, y_coord - 1), bold=True)
-            add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
-            add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
-            add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
+            if layer == depth:
+                add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, "{:.1f}".format(previous_layer), (24 + x_cord_add, vertical_end - previous_layer * 10),
+                         bold=True)
+                add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
+                add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
+            else:
+                add_line(msp, start=(0 + x_cord_add, y_coord), end=(137 + x_cord_add, y_coord), bold=True)
+                add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, "{:.1f}".format(previous_layer), (24 + x_cord_add, vertical_end - previous_layer * 10),
+                         bold=True)
+                add_text(msp, "{:.1f}".format(layer), (24 + x_cord_add, y_coord), bold=True)
+                add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
+                add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
             previous_layer = layer
         y_coord_text = vertical_end - 10 * (depth - (depth - layer) / 2)
-        add_text(msp, "{:.1f}".format(depth - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
-        add_text(msp, "{:.1f}".format(depth), (34 + x_cord_add, line_length + 2), bold=True)
-        add_text(msp, "{:.1f}".format(height - depth), (13 + x_cord_add, line_length + 2), bold=True)
+        # add_text(msp,"{:.1f}".format(depth-previous_layer),(44+x_cord_add,y_coord_text),bold=True)
+        # add_text(msp,"{:.1f}".format(depth),(34+x_cord_add,line_length+2),bold=True)
+        # add_text(msp,"{:.1f}".format(height-depth),(13+x_cord_add,line_length+2),bold=True)
 
     def add_vertical_text(msp, text, position, bold=False, font="Times New Roman", char_height=2):
 
