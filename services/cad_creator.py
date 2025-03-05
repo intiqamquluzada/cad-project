@@ -263,7 +263,12 @@ def generate_dxf(path_of_file):
             draw_outer_lines(msp, line_length, depth, length_table)
             draw_columns_and_labels(msp, line_length, depth, column_widths, length_table)
             draw_layer_text(msp, line_length, depth, layers, compositions, length_table, height)
-            water_line(msp, line_length, depth, water, water_qrunt, length_table)
+            if pd.notna(water[0]) and pd.notna(water_qrunt[0]):
+                water_line(msp, line_length, depth, water, water_qrunt, length_table)
+            elif pd.isna(water[0]) and pd.notna(water_qrunt[0]):
+                water_line(msp, line_length, depth, None, water_qrunt, length_table)
+            elif pd.notna(water[0]) and pd.isna(water_qrunt[0]):
+                water_line(msp, line_length, depth, water, None, length_table)
         # draw_table_headers(msp, y_start_table, x_current)
 
         dxf_file_path = os.path.join(settings.MEDIA_ROOT, "geoloji_kesilis_cedvel_setir.dxf")
