@@ -91,7 +91,7 @@ def generate_dxf(path_of_file):
             add_line_scale(msp, (-3 + previous_x, y_pos), (0 + previous_x, y_pos), layer="MyLayer", thickness=0.3)
             if i > 0:
                 add_line(msp, (-1.5 + previous_x, y_pos_2), (0 + previous_x, y_pos_2), bold=True, width=0.3)
-            add_text(msp, f"{qiymet:.1f}", (-9 + previous_x, y_pos + 1))
+            add_text(msp, f"{qiymet:.1f}", (-9.5 + previous_x, y_pos + 1))
             y_pos_n = y_pos
         add_text(msp, "H, m", (-3 + previous_x, y_pos + 5), height=3)
 
