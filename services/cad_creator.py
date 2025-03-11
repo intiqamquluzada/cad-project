@@ -360,7 +360,7 @@ def generate_dxf(path_of_file):
                    "\nSüxurların şərti\n      işarəsi",
                    "\n   Süxurların litoloji təsviri",
                    "\nNümunənin\n götürülmə\ndərinliyi,m",
-                   " Qrunt suları\n  haqqında\n   məlumat\nRast,   Qərar-\ngəlmə laşma,\n  m          m ",
+                   " Qrunt suları\n  haqqında\n   məlumat\nRast   Qərar-\ngəlmə, laşma,\n  m          m ",
                    ]
         vertical_end = line_length + depth * 10
         head_col = 0
@@ -384,7 +384,7 @@ def generate_dxf(path_of_file):
         add_vertical_text(msp, headers[0], (column_widths[0] + 1 + x_cord_add, vertical_end + 9), bold=True,
                           font="Times New Roman")
         add_vertical_text(msp, headers[1], (1 + x_cord_add, vertical_end + 9), bold=True, font="Times New Roman")
-        add_vertical_text(msp, headers[2], (sum(column_widths[:2]) + 1 + x_cord_add, vertical_end + 7), bold=True,
+        add_vertical_text(msp, headers[2], (sum(column_widths[:2]) + 1 + x_cord_add, vertical_end + 8), bold=True,
                           font="Times New Roman", char_height=1.5)
         add_text(msp, headers[3], (sum(column_widths[:3]) + 1 + x_cord_add, vertical_end + 22), bold=True,
                  font="Times New Roman")
