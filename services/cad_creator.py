@@ -217,9 +217,9 @@ def generate_dxf(path_of_file):
                 previous_x = x_current
             if idx == 0:
                 x2 = 0
-            add_line(msp, (x_current + 1, y_top), (x_current + 10, y_top), layer="MyLayer", bold=True)
-            add_line(msp, (x_current, y_bottom - 2), (x_current + 10, y_bottom - 2), layer="MyLayer", bold=True)
-            add_line(msp, (x_current + 10, y_bottom - 2), (x_current + 10, y_top), layer="MyLayer", bold=True)
+            add_line(msp, (x_current + 1, y_top), (x_current + 11, y_top), layer="MyLayer", bold=True)
+            add_line(msp, (x_current, y_bottom - 2), (x_current + 11, y_bottom - 2), layer="MyLayer", bold=True)
+            add_line(msp, (x_current + 10, y_bottom - 2), (x_current + 11, y_top), layer="MyLayer", bold=True)
             add_text(msp, f"{kesilis} xətti üzrə geoloji-litoloji kəsiliş",
                      (x_current - (x_current - x2) / 2, y_end * scale_factor_horizontal + 19), height=3, bold=True,
                      font="Times New Roman")
@@ -360,7 +360,7 @@ def generate_dxf(path_of_file):
                    "\nSüxurların şərti\n      işarəsi",
                    "\n   Süxurların litoloji təsviri",
                    "\nNümunənin\n götürülmə\ndərinliyi,m",
-                   " Qrunt suları\n  haqqında\n   məlumat\nRast   Qərar-\ngəlmə, laşma,\n  m          m ",
+                   " Qrunt suları\n  haqqında\n   məlumat\nRast    Qərar-\ngəlmə, laşma,\n  m          m ",
                    ]
         vertical_end = line_length + depth * 10
         head_col = 0
