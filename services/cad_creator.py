@@ -239,16 +239,17 @@ def generate_dxf(path_of_file):
         quyu_layers = laylar.iloc[:, 0].unique().tolist()
 
         for index, quyu in enumerate(quyu_layers):
-            miqyas = int(1000 / laylar[laylar.iloc[:, 0] == quyu].iloc[0, 9])
+            miqyas = int(1000 / laylar[laylar.iloc[:, 0] == quyu].iloc[0, 10])
             layers = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 1].values
-            water = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 3].unique()
-            water_qrunt = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 4].unique()
+            mge = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 3]
+            water = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 4].unique()
+            water_qrunt = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 5].unique()
             compositions = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 2].values
-            height = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 7]
-            place = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 6]
-            date = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 5].unique()
+            height = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 8]
+            place = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 7]
+            date = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 6].unique()
             line_length = y_length + 50
-            depth = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 8]
+            depth = laylar[laylar.iloc[:, 0] == quyu].iloc[0, 9]
             # column_widths = [-10, 20, 15, 15, 15, 15, 30, 100, 20, 10, 10]
             column_widths = [-10, 20, 10.5, 10.5, 10.5, 10.5, 24.4, 60.6, 18, 8.5, 8.5]
             if index == 0:
@@ -263,7 +264,7 @@ def generate_dxf(path_of_file):
             draw_vertical_lines(msp, line_length, depth, length_table, miqyas)
             draw_outer_lines(msp, line_length, depth, length_table, miqyas)
             draw_columns_and_labels(msp, line_length, depth, column_widths, length_table, miqyas)
-            draw_layer_text(msp, line_length, depth, layers, compositions, length_table, height, miqyas)
+            draw_layer_text(msp, line_length, depth, layers, compositions, length_table, height, miqyas, mge)
             if pd.notna(water[0]) and pd.notna(water_qrunt[0]):
                 water_line(msp, line_length, depth, water, water_qrunt, length_table, miqyas)
             elif pd.isna(water[0]) and pd.notna(water_qrunt[0]):
@@ -336,7 +337,7 @@ def generate_dxf(path_of_file):
                 y_olcu -= miqyas
             elif olcu % (miqyas / 2) == 0:
                 add_line(msp, (-1.5 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
-            elif olcu % (miqyas / 10) == 0:
+            elif olcu % (miqyas / 5) == 0:
                 add_line(msp, (-0.8 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
 
     def draw_outer_lines(msp, line_length, depth, x_cord_add, miqyas):
@@ -400,10 +401,18 @@ def generate_dxf(path_of_file):
         add_text(msp, headers[8], (sum(column_widths[:9]) + 1 + x_cord_add, vertical_end + 23), height=1.6, bold=True,
                  font="Times New Roman")
 
-    def draw_layer_text(msp, line_length, depth, layers, compositions, x_cord_add, height, miqyas):
+    def add_ellipse(msp, center, major_axis, minor_axis, color=256):
+        ellipse = msp.add_ellipse(
+            center=center,
+            major_axis=(major_axis, 0),
+            ratio=minor_axis / major_axis
+        )
+        ellipse.dxf.color = color
+
+    def draw_layer_text(msp, line_length, depth, layers, compositions, x_cord_add, height, miqyas, mge):
         vertical_end = line_length + depth * miqyas
         previous_layer = 0
-        for index, (layer, composition) in enumerate(zip(layers, compositions), start=1):
+        for mge, layer, composition in zip(mge, layers, compositions):
             y_coord = vertical_end - layer * miqyas
             if layer >= 0.30:
                 y_coord_text = vertical_end - miqyas * (layer - (layer - previous_layer) / 2)
@@ -413,24 +422,26 @@ def generate_dxf(path_of_file):
             text = round(height - layer, 2)
 
             if layer == depth:
-                add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, text, (12 + x_cord_add, y_coord + 2), bold=True)
                 add_text(msp, "{:.1f}".format(previous_layer),
-                         (24 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
+                         (23 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
                 add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
                 add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
                 add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, f"MGE-{index}", (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
+                add_text(msp, mge, (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
+                add_ellipse(msp, center=(145 + x_cord_add, y_coord_text - 1), major_axis=7, minor_axis=2.6, color=5)
 
             else:
                 add_line(msp, start=(0 + x_cord_add, y_coord), end=(137 + x_cord_add, y_coord), bold=True)
-                add_text(msp, text, (13 + x_cord_add, y_coord + 2), bold=True)
+                add_text(msp, text, (12 + x_cord_add, y_coord + 2), bold=True)
                 add_text(msp, "{:.1f}".format(previous_layer),
-                         (24 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
-                add_text(msp, "{:.1f}".format(layer), (24 + x_cord_add, y_coord), bold=True)
+                         (23 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
+                add_text(msp, "{:.1f}".format(layer), (23 + x_cord_add, y_coord), bold=True)
                 add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
                 add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
                 add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, f"MGE-{index}", (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
+                add_text(msp, mge, (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
+                add_ellipse(msp, center=(145 + x_cord_add, y_coord_text - 1), major_axis=7, minor_axis=2.6, color=5)
             previous_layer = layer
         y_coord_text = vertical_end - miqyas * (depth - (depth - layer) / 2)
         # add_text(msp,"{:.1f}".format(depth-previous_layer),(44+x_cord_add,y_coord_text),bold=True)
