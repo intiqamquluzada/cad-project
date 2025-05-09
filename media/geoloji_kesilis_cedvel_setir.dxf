@@ -485,7 +485,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2460736.7944328706
+2460805.3525694446
   9
 $TDUCREATE
  40
@@ -493,7 +493,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2460736.7944328706
+2460805.3525694446
   9
 $TDUUPDATE
  40
@@ -545,7 +545,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-E90
+E40
   9
 $SURFTAB1
  70
@@ -925,11 +925,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{A3003182-30F8-4272-A78E-7CC29760819E}
+{02ACF305-FC50-43E0-AA34-B3F668F8B5D5}
   9
 $VERSIONGUID
   2
-{3CFA572A-E7BE-4A49-8372-0E1727A10D4B}
+{6E1B725A-2550-468D-95C1-A8F10EE58A2D}
   9
 $EXTNAMES
 290
@@ -1319,9 +1319,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1335,9 +1335,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -1801,7 +1801,7 @@ ACAD
   0
 APPID
   5
-E8D
+E3D
 330
 3
 100
@@ -1815,7 +1815,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-E8E
+E3E
 330
 3
 100
@@ -85735,7 +85735,7 @@ AcDbMText
  10
 77.5
  20
-310.0
+280.0
  30
 0.0
  40
@@ -85763,7 +85763,7 @@ AcDbMText
  10
 62.5
  20
-305.0
+275.0
  30
 0.0
  40
@@ -85791,7 +85791,7 @@ AcDbMText
  10
 10.0
  20
-300.0
+270.0
  30
 0.0
  40
@@ -85819,7 +85819,7 @@ AcDbMText
  10
 10.0
  20
-295.0
+265.0
  30
 0.0
  40
@@ -85847,7 +85847,7 @@ AcDbMText
  10
 95.0
  20
-300.0
+270.0
  30
 0.0
  40
@@ -85875,7 +85875,7 @@ AcDbMText
  10
 95.0
  20
-295.0
+265.0
  30
 0.0
  40
@@ -85907,11 +85907,11 @@ AcDbPolyline
  10
 -10.0
  20
-290.0
+260.0
  10
 172.0
  20
-290.0
+260.0
   0
 LWPOLYLINE
   5
@@ -85933,11 +85933,11 @@ AcDbPolyline
  10
 -10.0
  20
-312.0
+282.0
  10
 172.0
  20
-312.0
+282.0
   0
 LWPOLYLINE
   5
@@ -85959,11 +85959,11 @@ AcDbPolyline
  10
 -10.0
  20
-290.0
+260.0
  10
 -10.0
  20
-312.0
+282.0
   0
 LWPOLYLINE
   5
@@ -85985,11 +85985,11 @@ AcDbPolyline
  10
 172.0
  20
-290.0
+260.0
  10
 172.0
  20
-312.0
+282.0
   0
 LINE
   5
@@ -86015,7 +86015,7 @@ AcDbLine
  11
 0.0
  21
-263.0
+233.0
  31
 0.0
   0
@@ -86045,7 +86045,7 @@ AcDbPolyline
  10
 0.0
  20
-263.0
+233.0
   0
 LWPOLYLINE
   5
@@ -86089,7 +86089,7 @@ AcDbMText
  10
 -8.0
  20
-263.0
+233.0
  30
 0.0
  40
@@ -86223,7 +86223,7 @@ AcDbPolyline
  43
 0.3
  10
--1.5
+-3.0
  20
 208.0
  10
@@ -86231,7 +86231,7 @@ AcDbPolyline
  20
 208.0
   0
-LWPOLYLINE
+MTEXT
   5
 D52
 330
@@ -86239,23 +86239,25 @@ D52
 100
 AcDbEntity
   8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
 0
- 43
-0.3
+ 62
+7
+100
+AcDbMText
  10
--0.8
+-8.0
  20
-209.0
- 10
+229.0
+ 30
 0.0
- 20
-209.0
+ 40
+2.0
+ 71
+1
+  1
+1.0
+  7
+Times New Roman_Bold
   0
 LWPOLYLINE
   5
@@ -86277,11 +86279,11 @@ AcDbPolyline
  10
 -0.8
  20
-210.0
+209.0
  10
 0.0
  20
-210.0
+209.0
   0
 LWPOLYLINE
   5
@@ -86303,11 +86305,11 @@ AcDbPolyline
  10
 -0.8
  20
-211.0
+210.0
  10
 0.0
  20
-211.0
+210.0
   0
 LWPOLYLINE
   5
@@ -86329,6 +86331,32 @@ AcDbPolyline
  10
 -0.8
  20
+211.0
+ 10
+0.0
+ 20
+211.0
+  0
+LWPOLYLINE
+  5
+D56
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-0.8
+ 20
 212.0
  10
 0.0
@@ -86337,7 +86365,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-D56
+D57
 330
 17
 100
@@ -86363,7 +86391,7 @@ AcDbPolyline
   0
 MTEXT
   5
-D57
+D58
 330
 17
 100
@@ -86377,7 +86405,7 @@ AcDbMText
  10
 -8.0
  20
-254.0
+224.0
  30
 0.0
  40
@@ -86385,35 +86413,9 @@ AcDbMText
  71
 1
   1
-1.0
+2.0
   7
 Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-D58
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-214.0
- 10
-0.0
- 20
-214.0
   0
 LWPOLYLINE
   5
@@ -86435,11 +86437,11 @@ AcDbPolyline
  10
 -0.8
  20
-215.0
+214.0
  10
 0.0
  20
-215.0
+214.0
   0
 LWPOLYLINE
   5
@@ -86461,11 +86463,11 @@ AcDbPolyline
  10
 -0.8
  20
-216.0
+215.0
  10
 0.0
  20
-216.0
+215.0
   0
 LWPOLYLINE
   5
@@ -86487,11 +86489,11 @@ AcDbPolyline
  10
 -0.8
  20
-217.0
+216.0
  10
 0.0
  20
-217.0
+216.0
   0
 LWPOLYLINE
   5
@@ -86511,13 +86513,13 @@ AcDbPolyline
  43
 0.3
  10
--1.5
+-0.8
  20
-218.0
+217.0
  10
 0.0
  20
-218.0
+217.0
   0
 LWPOLYLINE
   5
@@ -86537,15 +86539,15 @@ AcDbPolyline
  43
 0.3
  10
--0.8
+-3.0
  20
-219.0
+218.0
  10
 0.0
  20
-219.0
+218.0
   0
-LWPOLYLINE
+MTEXT
   5
 D5E
 330
@@ -86553,23 +86555,25 @@ D5E
 100
 AcDbEntity
   8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
 0
- 43
-0.3
+ 62
+7
+100
+AcDbMText
  10
--0.8
+-8.0
  20
-220.0
- 10
+219.0
+ 30
 0.0
- 20
-220.0
+ 40
+2.0
+ 71
+1
+  1
+3.0
+  7
+Times New Roman_Bold
   0
 LWPOLYLINE
   5
@@ -86591,11 +86595,11 @@ AcDbPolyline
  10
 -0.8
  20
-221.0
+219.0
  10
 0.0
  20
-221.0
+219.0
   0
 LWPOLYLINE
   5
@@ -86617,11 +86621,11 @@ AcDbPolyline
  10
 -0.8
  20
-222.0
+220.0
  10
 0.0
  20
-222.0
+220.0
   0
 LWPOLYLINE
   5
@@ -86641,15 +86645,15 @@ AcDbPolyline
  43
 0.3
  10
--3.0
+-0.8
  20
-223.0
+221.0
  10
 0.0
  20
-223.0
+221.0
   0
-MTEXT
+LWPOLYLINE
   5
 D62
 330
@@ -86657,25 +86661,23 @@ D62
 100
 AcDbEntity
   8
-0
- 62
-7
+Default
 100
-AcDbMText
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
  10
--8.0
+-0.8
  20
-244.0
- 30
+222.0
+ 10
 0.0
- 40
-2.0
- 71
-1
-  1
-2.0
-  7
-Times New Roman_Bold
+ 20
+222.0
   0
 LWPOLYLINE
   5
@@ -86695,827 +86697,17 @@ AcDbPolyline
  43
 0.3
  10
--0.8
+-3.0
  20
-224.0
+223.0
  10
 0.0
  20
-224.0
+223.0
   0
-LWPOLYLINE
+MTEXT
   5
 D64
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-225.0
- 10
-0.0
- 20
-225.0
-  0
-LWPOLYLINE
-  5
-D65
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-226.0
- 10
-0.0
- 20
-226.0
-  0
-LWPOLYLINE
-  5
-D66
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-227.0
- 10
-0.0
- 20
-227.0
-  0
-LWPOLYLINE
-  5
-D67
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--1.5
- 20
-228.0
- 10
-0.0
- 20
-228.0
-  0
-LWPOLYLINE
-  5
-D68
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-229.0
- 10
-0.0
- 20
-229.0
-  0
-LWPOLYLINE
-  5
-D69
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-230.0
- 10
-0.0
- 20
-230.0
-  0
-LWPOLYLINE
-  5
-D6A
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-231.0
- 10
-0.0
- 20
-231.0
-  0
-LWPOLYLINE
-  5
-D6B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-232.0
- 10
-0.0
- 20
-232.0
-  0
-LWPOLYLINE
-  5
-D6C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--3.0
- 20
-233.0
- 10
-0.0
- 20
-233.0
-  0
-MTEXT
-  5
-D6D
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
--8.0
- 20
-234.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-3.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-D6E
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-234.0
- 10
-0.0
- 20
-234.0
-  0
-LWPOLYLINE
-  5
-D6F
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-235.0
- 10
-0.0
- 20
-235.0
-  0
-LWPOLYLINE
-  5
-D70
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-236.0
- 10
-0.0
- 20
-236.0
-  0
-LWPOLYLINE
-  5
-D71
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-237.0
- 10
-0.0
- 20
-237.0
-  0
-LWPOLYLINE
-  5
-D72
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--1.5
- 20
-238.0
- 10
-0.0
- 20
-238.0
-  0
-LWPOLYLINE
-  5
-D73
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-239.0
- 10
-0.0
- 20
-239.0
-  0
-LWPOLYLINE
-  5
-D74
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-240.0
- 10
-0.0
- 20
-240.0
-  0
-LWPOLYLINE
-  5
-D75
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-241.0
- 10
-0.0
- 20
-241.0
-  0
-LWPOLYLINE
-  5
-D76
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-242.0
- 10
-0.0
- 20
-242.0
-  0
-LWPOLYLINE
-  5
-D77
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--3.0
- 20
-243.0
- 10
-0.0
- 20
-243.0
-  0
-MTEXT
-  5
-D78
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
--8.0
- 20
-224.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-4.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-D79
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-244.0
- 10
-0.0
- 20
-244.0
-  0
-LWPOLYLINE
-  5
-D7A
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-245.0
- 10
-0.0
- 20
-245.0
-  0
-LWPOLYLINE
-  5
-D7B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-246.0
- 10
-0.0
- 20
-246.0
-  0
-LWPOLYLINE
-  5
-D7C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-247.0
- 10
-0.0
- 20
-247.0
-  0
-LWPOLYLINE
-  5
-D7D
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--1.5
- 20
-248.0
- 10
-0.0
- 20
-248.0
-  0
-LWPOLYLINE
-  5
-D7E
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-249.0
- 10
-0.0
- 20
-249.0
-  0
-LWPOLYLINE
-  5
-D7F
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-250.0
- 10
-0.0
- 20
-250.0
-  0
-LWPOLYLINE
-  5
-D80
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-251.0
- 10
-0.0
- 20
-251.0
-  0
-LWPOLYLINE
-  5
-D81
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-252.0
- 10
-0.0
- 20
-252.0
-  0
-LWPOLYLINE
-  5
-D82
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--3.0
- 20
-253.0
- 10
-0.0
- 20
-253.0
-  0
-MTEXT
-  5
-D83
 330
 17
 100
@@ -87537,13 +86729,13 @@ AcDbMText
  71
 1
   1
-5.0
+4.0
   7
 Times New Roman_Bold
   0
 LWPOLYLINE
   5
-D84
+D65
 330
 17
 100
@@ -87561,15 +86753,15 @@ AcDbPolyline
  10
 -0.8
  20
-254.0
+224.0
  10
 0.0
  20
-254.0
+224.0
   0
 LWPOLYLINE
   5
-D85
+D66
 330
 17
 100
@@ -87587,15 +86779,15 @@ AcDbPolyline
  10
 -0.8
  20
-255.0
+225.0
  10
 0.0
  20
-255.0
+225.0
   0
 LWPOLYLINE
   5
-D86
+D67
 330
 17
 100
@@ -87613,15 +86805,15 @@ AcDbPolyline
  10
 -0.8
  20
-256.0
+226.0
  10
 0.0
  20
-256.0
+226.0
   0
 LWPOLYLINE
   5
-D87
+D68
 330
 17
 100
@@ -87639,145 +86831,15 @@ AcDbPolyline
  10
 -0.8
  20
-257.0
+227.0
  10
 0.0
  20
-257.0
+227.0
   0
 LWPOLYLINE
   5
-D88
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--1.5
- 20
-258.0
- 10
-0.0
- 20
-258.0
-  0
-LWPOLYLINE
-  5
-D89
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-259.0
- 10
-0.0
- 20
-259.0
-  0
-LWPOLYLINE
-  5
-D8A
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-260.0
- 10
-0.0
- 20
-260.0
-  0
-LWPOLYLINE
-  5
-D8B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-261.0
- 10
-0.0
- 20
-261.0
-  0
-LWPOLYLINE
-  5
-D8C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
--0.8
- 20
-262.0
- 10
-0.0
- 20
-262.0
-  0
-LWPOLYLINE
-  5
-D8D
+D69
 330
 17
 100
@@ -87795,15 +86857,173 @@ AcDbPolyline
  10
 -3.0
  20
-263.0
+228.0
  10
 0.0
  20
-263.0
+228.0
   0
 MTEXT
   5
-D8E
+D6A
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+-8.0
+ 20
+209.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+5.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+D6B
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-0.8
+ 20
+229.0
+ 10
+0.0
+ 20
+229.0
+  0
+LWPOLYLINE
+  5
+D6C
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-0.8
+ 20
+230.0
+ 10
+0.0
+ 20
+230.0
+  0
+LWPOLYLINE
+  5
+D6D
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-0.8
+ 20
+231.0
+ 10
+0.0
+ 20
+231.0
+  0
+LWPOLYLINE
+  5
+D6E
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-0.8
+ 20
+232.0
+ 10
+0.0
+ 20
+232.0
+  0
+LWPOLYLINE
+  5
+D6F
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+-3.0
+ 20
+233.0
+ 10
+0.0
+ 20
+233.0
+  0
+MTEXT
+  5
+D70
 330
 17
 100
@@ -87831,7 +87051,7 @@ Times New Roman_Bold
   0
 LWPOLYLINE
   5
-D8F
+D71
 330
 17
 100
@@ -87857,7 +87077,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-D90
+D72
 330
 17
 100
@@ -87883,7 +87103,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-D91
+D73
 330
 17
 100
@@ -87901,15 +87121,15 @@ AcDbPolyline
  10
 -10.0
  20
-263.0
+233.0
  10
 172.0
  20
-263.0
+233.0
   0
 LWPOLYLINE
   5
-D92
+D74
 330
 17
 100
@@ -87927,15 +87147,15 @@ AcDbPolyline
  10
 -10.0
  20
-270.0
+240.0
  10
 172.0
  20
-270.0
+240.0
   0
 LWPOLYLINE
   5
-D93
+D75
 330
 17
 100
@@ -87957,11 +87177,11 @@ AcDbPolyline
  10
 172.0
  20
-286.0
+256.0
   0
 LWPOLYLINE
   5
-D94
+D76
 330
 17
 100
@@ -87979,15 +87199,15 @@ AcDbPolyline
  10
 -10.0
  20
-286.0
+256.0
  10
 172.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-D95
+D77
 330
 17
 100
@@ -88001,7 +87221,7 @@ AcDbMText
  10
 -6.0
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88015,7 +87235,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-D96
+D78
 330
 17
 100
@@ -88037,11 +87257,11 @@ AcDbPolyline
  10
 -10.0
  20
-286.0
+256.0
   0
 LWPOLYLINE
   5
-D97
+D79
 330
 17
 100
@@ -88063,11 +87283,11 @@ AcDbPolyline
  10
 10.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-D98
+D7A
 330
 17
 100
@@ -88081,7 +87301,7 @@ AcDbMText
  10
 14.25
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88095,7 +87315,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-D99
+D7B
 330
 17
 100
@@ -88117,11 +87337,11 @@ AcDbPolyline
  10
 20.5
  20
-286.0
+256.0
   0
 MTEXT
   5
-D9A
+D7C
 330
 17
 100
@@ -88135,7 +87355,7 @@ AcDbMText
  10
 24.75
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88149,7 +87369,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-D9B
+D7D
 330
 17
 100
@@ -88171,11 +87391,11 @@ AcDbPolyline
  10
 31.0
  20
-278.0
+248.0
   0
 LWPOLYLINE
   5
-D9C
+D7E
 330
 17
 100
@@ -88193,15 +87413,15 @@ AcDbPolyline
  10
 20.5
  20
-278.0
+248.0
  10
 41.5
  20
-278.0
+248.0
   0
 MTEXT
   5
-D9D
+D7F
 330
 17
 100
@@ -88215,7 +87435,7 @@ AcDbMText
  10
 35.25
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88229,7 +87449,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-D9E
+D80
 330
 17
 100
@@ -88251,11 +87471,11 @@ AcDbPolyline
  10
 41.5
  20
-286.0
+256.0
   0
 MTEXT
   5
-D9F
+D81
 330
 17
 100
@@ -88269,7 +87489,7 @@ AcDbMText
  10
 45.75
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88283,7 +87503,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DA0
+D82
 330
 17
 100
@@ -88305,11 +87525,11 @@ AcDbPolyline
  10
 52.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-DA1
+D83
 330
 17
 100
@@ -88323,7 +87543,7 @@ AcDbMText
  10
 63.2
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88337,7 +87557,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DA2
+D84
 330
 17
 100
@@ -88359,11 +87579,11 @@ AcDbPolyline
  10
 76.4
  20
-286.0
+256.0
   0
 MTEXT
   5
-DA3
+D85
 330
 17
 100
@@ -88377,7 +87597,7 @@ AcDbMText
  10
 105.7
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88391,7 +87611,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DA4
+D86
 330
 17
 100
@@ -88413,11 +87633,11 @@ AcDbPolyline
  10
 137.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-DA5
+D87
 330
 17
 100
@@ -88431,7 +87651,7 @@ AcDbMText
  10
 145.0
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88445,7 +87665,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DA6
+D88
 330
 17
 100
@@ -88467,11 +87687,11 @@ AcDbPolyline
  10
 155.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-DA7
+D89
 330
 17
 100
@@ -88485,7 +87705,7 @@ AcDbMText
  10
 158.25
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88499,7 +87719,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DA8
+D8A
 330
 17
 100
@@ -88521,11 +87741,11 @@ AcDbPolyline
  10
 163.5
  20
-278.0
+248.0
   0
 LWPOLYLINE
   5
-DA9
+D8B
 330
 17
 100
@@ -88543,15 +87763,15 @@ AcDbPolyline
  10
 155.0
  20
-278.0
+248.0
  10
 172.0
  20
-278.0
+248.0
   0
 MTEXT
   5
-DAA
+D8C
 330
 17
 100
@@ -88565,7 +87785,7 @@ AcDbMText
  10
 166.75
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88579,7 +87799,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-DAB
+D8D
 330
 17
 100
@@ -88601,11 +87821,11 @@ AcDbPolyline
  10
 172.0
  20
-286.0
+256.0
   0
 LWPOLYLINE
   5
-DAC
+D8E
 330
 17
 100
@@ -88623,15 +87843,15 @@ AcDbPolyline
  10
 0.0
  20
-263.0
+233.0
  10
 0.0
  20
-286.0
+256.0
   0
 MTEXT
   5
-DAD
+D8F
 330
 17
 100
@@ -88645,7 +87865,7 @@ AcDbMText
  10
 5.0
  20
-267.0
+237.0
  30
 0.0
  40
@@ -88659,7 +87879,7 @@ Times New Roman
   0
 MTEXT
   5
-DAE
+D90
 330
 17
 100
@@ -88671,7 +87891,7 @@ AcDbMText
  10
 -9.0
  20
-272.0
+242.0
  30
 0.0
  40
@@ -88687,7 +87907,7 @@ Bold
   0
 MTEXT
   5
-DAF
+D91
 330
 17
 100
@@ -88699,7 +87919,7 @@ AcDbMText
  10
 1.0
  20
-272.0
+242.0
  30
 0.0
  40
@@ -88715,7 +87935,7 @@ Bold
   0
 MTEXT
   5
-DB0
+D92
 330
 17
 100
@@ -88727,7 +87947,7 @@ AcDbMText
  10
 11.0
  20
-270.0
+240.0
  30
 0.0
  40
@@ -88743,7 +87963,7 @@ Bold
   0
 MTEXT
   5
-DB1
+D93
 330
 17
 100
@@ -88757,7 +87977,7 @@ AcDbMText
  10
 21.5
  20
-285.0
+255.0
  30
 0.0
  40
@@ -88771,7 +87991,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DB2
+D94
 330
 17
 100
@@ -88783,7 +88003,7 @@ AcDbMText
  10
 42.5
  20
-272.0
+242.0
  30
 0.0
  40
@@ -88799,7 +88019,7 @@ Bold
   0
 MTEXT
   5
-DB3
+D95
 330
 17
 100
@@ -88813,7 +88033,7 @@ AcDbMText
  10
 53.0
  20
-285.0
+255.0
  30
 0.0
  40
@@ -88827,7 +88047,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DB4
+D96
 330
 17
 100
@@ -88841,7 +88061,7 @@ AcDbMText
  10
 77.4
  20
-285.0
+255.0
  30
 0.0
  40
@@ -88855,7 +88075,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DB5
+D97
 330
 17
 100
@@ -88869,7 +88089,7 @@ AcDbMText
  10
 138.0
  20
-285.0
+255.0
  30
 0.0
  40
@@ -88883,7 +88103,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DB6
+D98
 330
 17
 100
@@ -88897,7 +88117,7 @@ AcDbMText
  10
 156.0
  20
-286.0
+256.0
  30
 0.0
  40
@@ -88911,7 +88131,7 @@ Times New Roman_Bold
   0
 LWPOLYLINE
   5
-DB7
+D99
 330
 17
 100
@@ -88929,15 +88149,15 @@ AcDbPolyline
  10
 0.0
  20
-255.0
+229.0
  10
-155.0
+137.0
  20
-255.0
+229.0
   0
 MTEXT
   5
-DB8
+D9A
 330
 17
 100
@@ -88951,7 +88171,7 @@ AcDbMText
  10
 13.0
  20
-257.0
+231.0
  30
 0.0
  40
@@ -88965,7 +88185,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DB9
+D9B
 330
 17
 100
@@ -88979,7 +88199,7 @@ AcDbMText
  10
 24.0
  20
-262.0
+233.0
  30
 0.0
  40
@@ -88993,7 +88213,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DBA
+D9C
 330
 17
 100
@@ -89007,7 +88227,7 @@ AcDbMText
  10
 24.0
  20
-254.0
+229.0
  30
 0.0
  40
@@ -89021,7 +88241,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DBB
+D9D
 330
 17
 100
@@ -89035,7 +88255,7 @@ AcDbMText
  10
 34.0
  20
-257.0
+231.0
  30
 0.0
  40
@@ -89049,7 +88269,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DBC
+D9E
 330
 17
 100
@@ -89063,7 +88283,7 @@ AcDbMText
  10
 44.0
  20
-259.0
+231.0
  30
 0.0
  40
@@ -89077,7 +88297,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DBD
+D9F
 330
 17
 100
@@ -89091,7 +88311,7 @@ AcDbMText
  10
 80.0
  20
-259.0
+231.0
  30
 0.0
  40
@@ -89103,9 +88323,37 @@ qara torpaq
   7
 Times New Roman_Bold
   0
+MTEXT
+  5
+DA0
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+100
+AcDbMText
+ 10
+140.0
+ 20
+231.0
+ 30
+0.0
+ 40
+2.1
+ 71
+1
+  1
+MGE-1
+  7
+Times New Roman_Bold
+  0
 LWPOLYLINE
   5
-DBE
+DA1
 330
 17
 100
@@ -89123,15 +88371,15 @@ AcDbPolyline
  10
 0.0
  20
-233.0
+218.0
  10
-155.0
+137.0
  20
-233.0
+218.0
   0
 MTEXT
   5
-DBF
+DA2
 330
 17
 100
@@ -89145,7 +88393,7 @@ AcDbMText
  10
 13.0
  20
-235.0
+220.0
  30
 0.0
  40
@@ -89159,7 +88407,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC0
+DA3
 330
 17
 100
@@ -89173,7 +88421,7 @@ AcDbMText
  10
 24.0
  20
-254.0
+229.0
  30
 0.0
  40
@@ -89187,7 +88435,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC1
+DA4
 330
 17
 100
@@ -89201,7 +88449,7 @@ AcDbMText
  10
 24.0
  20
-232.0
+218.0
  30
 0.0
  40
@@ -89215,7 +88463,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC2
+DA5
 330
 17
 100
@@ -89229,7 +88477,7 @@ AcDbMText
  10
 34.0
  20
-235.0
+220.0
  30
 0.0
  40
@@ -89243,7 +88491,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC3
+DA6
 330
 17
 100
@@ -89257,7 +88505,7 @@ AcDbMText
  10
 44.0
  20
-244.0
+223.5
  30
 0.0
  40
@@ -89271,7 +88519,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC4
+DA7
 330
 17
 100
@@ -89285,7 +88533,7 @@ AcDbMText
  10
 80.0
  20
-244.0
+223.5
  30
 0.0
  40
@@ -89297,9 +88545,37 @@ gil
   7
 Times New Roman_Bold
   0
+MTEXT
+  5
+DA8
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+100
+AcDbMText
+ 10
+140.0
+ 20
+223.5
+ 30
+0.0
+ 40
+2.1
+ 71
+1
+  1
+MGE-2
+  7
+Times New Roman_Bold
+  0
 LWPOLYLINE
   5
-DC5
+DA9
 330
 17
 100
@@ -89317,15 +88593,15 @@ AcDbPolyline
  10
 0.0
  20
-218.0
+210.5
  10
-155.0
+137.0
  20
-218.0
+210.5
   0
 MTEXT
   5
-DC6
+DAA
 330
 17
 100
@@ -89339,7 +88615,7 @@ AcDbMText
  10
 13.0
  20
-220.0
+212.5
  30
 0.0
  40
@@ -89353,7 +88629,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC7
+DAB
 330
 17
 100
@@ -89367,7 +88643,7 @@ AcDbMText
  10
 24.0
  20
-232.0
+218.0
  30
 0.0
  40
@@ -89381,7 +88657,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC8
+DAC
 330
 17
 100
@@ -89395,7 +88671,7 @@ AcDbMText
  10
 24.0
  20
-217.0
+210.5
  30
 0.0
  40
@@ -89409,7 +88685,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DC9
+DAD
 330
 17
 100
@@ -89423,7 +88699,7 @@ AcDbMText
  10
 34.0
  20
-220.0
+212.5
  30
 0.0
  40
@@ -89437,7 +88713,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DCA
+DAE
 330
 17
 100
@@ -89451,7 +88727,7 @@ AcDbMText
  10
 44.0
  20
-225.5
+214.25
  30
 0.0
  40
@@ -89465,7 +88741,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DCB
+DAF
 330
 17
 100
@@ -89479,7 +88755,7 @@ AcDbMText
  10
 80.0
  20
-225.5
+214.25
  30
 0.0
  40
@@ -89493,7 +88769,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DCC
+DB0
 330
 17
 100
@@ -89501,55 +88777,27 @@ AcDbEntity
   8
 0
  62
-7
+5
 100
 AcDbMText
  10
-44.0
+140.0
  20
-210.5
+214.25
  30
 0.0
  40
-2.0
+2.1
  71
 1
   1
-1.5
+MGE-3
   7
 Times New Roman_Bold
   0
 MTEXT
   5
-DCD
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-34.0
- 20
-205.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-6.0
-  7
-Times New Roman_Bold
-  0
-MTEXT
-  5
-DCE
+DB1
 330
 17
 100
@@ -89575,37 +88823,121 @@ AcDbMText
   7
 Times New Roman_Bold
   0
-LWPOLYLINE
+MTEXT
   5
-DCF
+DB2
 330
 17
 100
 AcDbEntity
   8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
 0
- 43
-0.3
+ 62
+7
+100
+AcDbMText
  10
-155.0
+24.0
  20
-251.0
- 10
-163.5
- 20
-251.0
+210.5
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+4.5
+  7
+Times New Roman_Bold
   0
 MTEXT
   5
-DD0
+DB3
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+34.0
+ 20
+205.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+6.0
+  7
+Times New Roman_Bold
+  0
+MTEXT
+  5
+DB4
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+44.0
+ 20
+206.75
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+1.5
+  7
+Times New Roman_Bold
+  0
+MTEXT
+  5
+DB5
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+80.0
+ 20
+206.75
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+qum sadasda\Psadadfe
+  7
+Times New Roman_Bold
+  0
+MTEXT
+  5
+DB6
 330
 17
 100
@@ -89617,163 +88949,79 @@ AcDbEntity
 100
 AcDbMText
  10
-157.5
+140.0
  20
-254.0
+206.75
  30
 0.0
  40
-2.0
+2.1
  71
 1
   1
-1.2
+MGE-4
   7
 Times New Roman_Bold
   0
-LWPOLYLINE
+LINE
   5
-DD1
+DB7
 330
 17
 100
 AcDbEntity
   8
-Default
+MyLayer
  62
 5
+370
+30
+100
+AcDbLine
+ 10
+163.5
+ 20
+225.5
+ 30
+0.0
+ 11
+172.0
+ 21
+225.5
+ 31
+0.0
+  0
+LWPOLYLINE
+  5
+DB8
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+370
+30
 100
 AcDbPolyline
  90
 2
  70
 0
- 43
-0.3
- 10
-155.0
- 20
-251.0
  10
 163.5
  20
-251.0
-  0
-MTEXT
-  5
-DD2
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-157.5
- 20
-254.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.2
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DD3
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-155.0
- 20
-251.0
- 10
-163.5
- 20
-251.0
-  0
-MTEXT
-  5
-DD4
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-157.5
- 20
-254.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.2
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DD5
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-163.5
- 20
-253.0
+225.5
  10
 172.0
  20
-253.0
+225.5
   0
 MTEXT
   5
-DD6
+DB9
 330
 17
 100
@@ -89787,7 +89035,7 @@ AcDbMText
  10
 166.0
  20
-256.0
+228.5
  30
 0.0
  40
@@ -89795,125 +89043,13 @@ AcDbMText
  71
 1
   1
-1.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DD7
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-163.5
- 20
-253.0
- 10
-172.0
- 20
-253.0
-  0
-MTEXT
-  5
-DD8
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-166.0
- 20
-256.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DD9
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-163.5
- 20
-253.0
- 10
-172.0
- 20
-253.0
-  0
-MTEXT
-  5
-DDA
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-166.0
- 20
-256.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.0
+1.5
   7
 Times New Roman_Bold
   0
 MTEXT
   5
-DDB
+DBA
 330
 17
 100
@@ -89927,7 +89063,7 @@ AcDbMText
  10
 276.0
  20
-320.0
+285.0
  30
 0.0
  40
@@ -89941,7 +89077,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DDC
+DBB
 330
 17
 100
@@ -89955,7 +89091,7 @@ AcDbMText
  10
 262.5
  20
-315.0
+280.0
  30
 0.0
  40
@@ -89969,7 +89105,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DDD
+DBC
 330
 17
 100
@@ -89983,7 +89119,7 @@ AcDbMText
  10
 210.0
  20
-310.0
+275.0
  30
 0.0
  40
@@ -89997,7 +89133,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DDE
+DBD
 330
 17
 100
@@ -90011,7 +89147,7 @@ AcDbMText
  10
 210.0
  20
-305.0
+270.0
  30
 0.0
  40
@@ -90025,7 +89161,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DDF
+DBE
 330
 17
 100
@@ -90039,7 +89175,7 @@ AcDbMText
  10
 295.0
  20
-310.0
+275.0
  30
 0.0
  40
@@ -90053,7 +89189,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-DE0
+DBF
 330
 17
 100
@@ -90067,7 +89203,7 @@ AcDbMText
  10
 295.0
  20
-305.0
+270.0
  30
 0.0
  40
@@ -90081,7 +89217,7 @@ Times New Roman_Bold
   0
 LWPOLYLINE
   5
-DE1
+DC0
 330
 17
 100
@@ -90099,15 +89235,15 @@ AcDbPolyline
  10
 190.0
  20
-300.0
+265.0
  10
 372.0
  20
-300.0
+265.0
   0
 LWPOLYLINE
   5
-DE2
+DC1
 330
 17
 100
@@ -90125,15 +89261,15 @@ AcDbPolyline
  10
 190.0
  20
-322.0
+287.0
  10
 372.0
  20
-322.0
+287.0
   0
 LWPOLYLINE
   5
-DE3
+DC2
 330
 17
 100
@@ -90151,15 +89287,15 @@ AcDbPolyline
  10
 190.0
  20
-300.0
+265.0
  10
 190.0
  20
-322.0
+287.0
   0
 LWPOLYLINE
   5
-DE4
+DC3
 330
 17
 100
@@ -90177,15 +89313,15 @@ AcDbPolyline
  10
 372.0
  20
-300.0
+265.0
  10
 372.0
  20
-322.0
+287.0
   0
 LINE
   5
-DE5
+DC4
 330
 17
 100
@@ -90207,13 +89343,13 @@ AcDbLine
  11
 200.0
  21
-273.0
+238.0
  31
 0.0
   0
 LWPOLYLINE
   5
-DE6
+DC5
 330
 17
 100
@@ -90237,11 +89373,11 @@ AcDbPolyline
  10
 200.0
  20
-273.0
+238.0
   0
 LWPOLYLINE
   5
-DE7
+DC6
 330
 17
 100
@@ -90267,7 +89403,7 @@ AcDbPolyline
   0
 MTEXT
   5
-DE8
+DC7
 330
 17
 100
@@ -90281,7 +89417,7 @@ AcDbMText
  10
 192.0
  20
-273.0
+238.0
  30
 0.0
  40
@@ -90292,6 +89428,874 @@ AcDbMText
 0.0
   7
 Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DC8
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+204.0
+ 10
+200.0
+ 20
+204.0
+  0
+LWPOLYLINE
+  5
+DC9
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+205.0
+ 10
+200.0
+ 20
+205.0
+  0
+LWPOLYLINE
+  5
+DCA
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+206.0
+ 10
+200.0
+ 20
+206.0
+  0
+LWPOLYLINE
+  5
+DCB
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+207.0
+ 10
+200.0
+ 20
+207.0
+  0
+LWPOLYLINE
+  5
+DCC
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+197.0
+ 20
+208.0
+ 10
+200.0
+ 20
+208.0
+  0
+MTEXT
+  5
+DCD
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+192.0
+ 20
+234.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+1.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DCE
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+209.0
+ 10
+200.0
+ 20
+209.0
+  0
+LWPOLYLINE
+  5
+DCF
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+210.0
+ 10
+200.0
+ 20
+210.0
+  0
+LWPOLYLINE
+  5
+DD0
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+211.0
+ 10
+200.0
+ 20
+211.0
+  0
+LWPOLYLINE
+  5
+DD1
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+212.0
+ 10
+200.0
+ 20
+212.0
+  0
+LWPOLYLINE
+  5
+DD2
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+197.0
+ 20
+213.0
+ 10
+200.0
+ 20
+213.0
+  0
+MTEXT
+  5
+DD3
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+192.0
+ 20
+229.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+2.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DD4
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+214.0
+ 10
+200.0
+ 20
+214.0
+  0
+LWPOLYLINE
+  5
+DD5
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+215.0
+ 10
+200.0
+ 20
+215.0
+  0
+LWPOLYLINE
+  5
+DD6
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+216.0
+ 10
+200.0
+ 20
+216.0
+  0
+LWPOLYLINE
+  5
+DD7
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+217.0
+ 10
+200.0
+ 20
+217.0
+  0
+LWPOLYLINE
+  5
+DD8
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+197.0
+ 20
+218.0
+ 10
+200.0
+ 20
+218.0
+  0
+MTEXT
+  5
+DD9
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+192.0
+ 20
+224.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+3.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DDA
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+219.0
+ 10
+200.0
+ 20
+219.0
+  0
+LWPOLYLINE
+  5
+DDB
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+220.0
+ 10
+200.0
+ 20
+220.0
+  0
+LWPOLYLINE
+  5
+DDC
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+221.0
+ 10
+200.0
+ 20
+221.0
+  0
+LWPOLYLINE
+  5
+DDD
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+222.0
+ 10
+200.0
+ 20
+222.0
+  0
+LWPOLYLINE
+  5
+DDE
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+197.0
+ 20
+223.0
+ 10
+200.0
+ 20
+223.0
+  0
+MTEXT
+  5
+DDF
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+192.0
+ 20
+219.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+4.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DE0
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+224.0
+ 10
+200.0
+ 20
+224.0
+  0
+LWPOLYLINE
+  5
+DE1
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+225.0
+ 10
+200.0
+ 20
+225.0
+  0
+LWPOLYLINE
+  5
+DE2
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+226.0
+ 10
+200.0
+ 20
+226.0
+  0
+LWPOLYLINE
+  5
+DE3
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+227.0
+ 10
+200.0
+ 20
+227.0
+  0
+LWPOLYLINE
+  5
+DE4
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+197.0
+ 20
+228.0
+ 10
+200.0
+ 20
+228.0
+  0
+MTEXT
+  5
+DE5
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+7
+100
+AcDbMText
+ 10
+192.0
+ 20
+214.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+5.0
+  7
+Times New Roman_Bold
+  0
+LWPOLYLINE
+  5
+DE6
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+229.0
+ 10
+200.0
+ 20
+229.0
+  0
+LWPOLYLINE
+  5
+DE7
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+230.0
+ 10
+200.0
+ 20
+230.0
+  0
+LWPOLYLINE
+  5
+DE8
+330
+17
+100
+AcDbEntity
+  8
+Default
+100
+AcDbPolyline
+ 90
+2
+ 70
+0
+ 43
+0.3
+ 10
+199.2
+ 20
+231.0
+ 10
+200.0
+ 20
+231.0
   0
 LWPOLYLINE
   5
@@ -90313,11 +90317,11 @@ AcDbPolyline
  10
 199.2
  20
-204.0
+232.0
  10
 200.0
  20
-204.0
+232.0
   0
 LWPOLYLINE
   5
@@ -90337,15 +90341,15 @@ AcDbPolyline
  43
 0.3
  10
-199.2
+197.0
  20
-205.0
+233.0
  10
 200.0
  20
-205.0
+233.0
   0
-LWPOLYLINE
+MTEXT
   5
 DEB
 330
@@ -90353,23 +90357,25 @@ DEB
 100
 AcDbEntity
   8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
 0
- 43
-0.3
+ 62
+7
+100
+AcDbMText
  10
-199.2
+192.0
  20
-206.0
- 10
-200.0
- 20
-206.0
+209.0
+ 30
+0.0
+ 40
+2.0
+ 71
+1
+  1
+6.0
+  7
+Times New Roman_Bold
   0
 LWPOLYLINE
   5
@@ -90391,11 +90397,11 @@ AcDbPolyline
  10
 199.2
  20
-207.0
+234.0
  10
 200.0
  20
-207.0
+234.0
   0
 LWPOLYLINE
   5
@@ -90415,13 +90421,13 @@ AcDbPolyline
  43
 0.3
  10
-198.5
+199.2
  20
-208.0
+235.0
  10
 200.0
  20
-208.0
+235.0
   0
 LWPOLYLINE
   5
@@ -90443,11 +90449,11 @@ AcDbPolyline
  10
 199.2
  20
-209.0
+236.0
  10
 200.0
  20
-209.0
+236.0
   0
 LWPOLYLINE
   5
@@ -90469,11 +90475,11 @@ AcDbPolyline
  10
 199.2
  20
-210.0
+237.0
  10
 200.0
  20
-210.0
+237.0
   0
 LWPOLYLINE
   5
@@ -90493,1797 +90499,17 @@ AcDbPolyline
  43
 0.3
  10
-199.2
+197.0
  20
-211.0
+238.0
  10
 200.0
  20
-211.0
+238.0
   0
-LWPOLYLINE
+MTEXT
   5
 DF1
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-212.0
- 10
-200.0
- 20
-212.0
-  0
-LWPOLYLINE
-  5
-DF2
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-213.0
- 10
-200.0
- 20
-213.0
-  0
-MTEXT
-  5
-DF3
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-264.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DF4
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-214.0
- 10
-200.0
- 20
-214.0
-  0
-LWPOLYLINE
-  5
-DF5
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-215.0
- 10
-200.0
- 20
-215.0
-  0
-LWPOLYLINE
-  5
-DF6
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-216.0
- 10
-200.0
- 20
-216.0
-  0
-LWPOLYLINE
-  5
-DF7
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-217.0
- 10
-200.0
- 20
-217.0
-  0
-LWPOLYLINE
-  5
-DF8
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-218.0
- 10
-200.0
- 20
-218.0
-  0
-LWPOLYLINE
-  5
-DF9
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-219.0
- 10
-200.0
- 20
-219.0
-  0
-LWPOLYLINE
-  5
-DFA
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-220.0
- 10
-200.0
- 20
-220.0
-  0
-LWPOLYLINE
-  5
-DFB
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-221.0
- 10
-200.0
- 20
-221.0
-  0
-LWPOLYLINE
-  5
-DFC
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-222.0
- 10
-200.0
- 20
-222.0
-  0
-LWPOLYLINE
-  5
-DFD
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-223.0
- 10
-200.0
- 20
-223.0
-  0
-MTEXT
-  5
-DFE
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-254.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-2.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-DFF
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-224.0
- 10
-200.0
- 20
-224.0
-  0
-LWPOLYLINE
-  5
-E00
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-225.0
- 10
-200.0
- 20
-225.0
-  0
-LWPOLYLINE
-  5
-E01
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-226.0
- 10
-200.0
- 20
-226.0
-  0
-LWPOLYLINE
-  5
-E02
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-227.0
- 10
-200.0
- 20
-227.0
-  0
-LWPOLYLINE
-  5
-E03
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-228.0
- 10
-200.0
- 20
-228.0
-  0
-LWPOLYLINE
-  5
-E04
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-229.0
- 10
-200.0
- 20
-229.0
-  0
-LWPOLYLINE
-  5
-E05
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-230.0
- 10
-200.0
- 20
-230.0
-  0
-LWPOLYLINE
-  5
-E06
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-231.0
- 10
-200.0
- 20
-231.0
-  0
-LWPOLYLINE
-  5
-E07
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-232.0
- 10
-200.0
- 20
-232.0
-  0
-LWPOLYLINE
-  5
-E08
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-233.0
- 10
-200.0
- 20
-233.0
-  0
-MTEXT
-  5
-E09
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-244.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-3.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E0A
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-234.0
- 10
-200.0
- 20
-234.0
-  0
-LWPOLYLINE
-  5
-E0B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-235.0
- 10
-200.0
- 20
-235.0
-  0
-LWPOLYLINE
-  5
-E0C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-236.0
- 10
-200.0
- 20
-236.0
-  0
-LWPOLYLINE
-  5
-E0D
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-237.0
- 10
-200.0
- 20
-237.0
-  0
-LWPOLYLINE
-  5
-E0E
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-238.0
- 10
-200.0
- 20
-238.0
-  0
-LWPOLYLINE
-  5
-E0F
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-239.0
- 10
-200.0
- 20
-239.0
-  0
-LWPOLYLINE
-  5
-E10
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-240.0
- 10
-200.0
- 20
-240.0
-  0
-LWPOLYLINE
-  5
-E11
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-241.0
- 10
-200.0
- 20
-241.0
-  0
-LWPOLYLINE
-  5
-E12
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-242.0
- 10
-200.0
- 20
-242.0
-  0
-LWPOLYLINE
-  5
-E13
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-243.0
- 10
-200.0
- 20
-243.0
-  0
-MTEXT
-  5
-E14
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-234.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-4.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E15
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-244.0
- 10
-200.0
- 20
-244.0
-  0
-LWPOLYLINE
-  5
-E16
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-245.0
- 10
-200.0
- 20
-245.0
-  0
-LWPOLYLINE
-  5
-E17
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-246.0
- 10
-200.0
- 20
-246.0
-  0
-LWPOLYLINE
-  5
-E18
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-247.0
- 10
-200.0
- 20
-247.0
-  0
-LWPOLYLINE
-  5
-E19
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-248.0
- 10
-200.0
- 20
-248.0
-  0
-LWPOLYLINE
-  5
-E1A
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-249.0
- 10
-200.0
- 20
-249.0
-  0
-LWPOLYLINE
-  5
-E1B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-250.0
- 10
-200.0
- 20
-250.0
-  0
-LWPOLYLINE
-  5
-E1C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-251.0
- 10
-200.0
- 20
-251.0
-  0
-LWPOLYLINE
-  5
-E1D
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-252.0
- 10
-200.0
- 20
-252.0
-  0
-LWPOLYLINE
-  5
-E1E
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-253.0
- 10
-200.0
- 20
-253.0
-  0
-MTEXT
-  5
-E1F
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-224.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-5.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E20
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-254.0
- 10
-200.0
- 20
-254.0
-  0
-LWPOLYLINE
-  5
-E21
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-255.0
- 10
-200.0
- 20
-255.0
-  0
-LWPOLYLINE
-  5
-E22
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-256.0
- 10
-200.0
- 20
-256.0
-  0
-LWPOLYLINE
-  5
-E23
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-257.0
- 10
-200.0
- 20
-257.0
-  0
-LWPOLYLINE
-  5
-E24
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-258.0
- 10
-200.0
- 20
-258.0
-  0
-LWPOLYLINE
-  5
-E25
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-259.0
- 10
-200.0
- 20
-259.0
-  0
-LWPOLYLINE
-  5
-E26
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-260.0
- 10
-200.0
- 20
-260.0
-  0
-LWPOLYLINE
-  5
-E27
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-261.0
- 10
-200.0
- 20
-261.0
-  0
-LWPOLYLINE
-  5
-E28
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-262.0
- 10
-200.0
- 20
-262.0
-  0
-LWPOLYLINE
-  5
-E29
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-263.0
- 10
-200.0
- 20
-263.0
-  0
-MTEXT
-  5
-E2A
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-192.0
- 20
-214.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-6.0
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E2B
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-264.0
- 10
-200.0
- 20
-264.0
-  0
-LWPOLYLINE
-  5
-E2C
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-265.0
- 10
-200.0
- 20
-265.0
-  0
-LWPOLYLINE
-  5
-E2D
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-266.0
- 10
-200.0
- 20
-266.0
-  0
-LWPOLYLINE
-  5
-E2E
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-267.0
- 10
-200.0
- 20
-267.0
-  0
-LWPOLYLINE
-  5
-E2F
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-198.5
- 20
-268.0
- 10
-200.0
- 20
-268.0
-  0
-LWPOLYLINE
-  5
-E30
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-269.0
- 10
-200.0
- 20
-269.0
-  0
-LWPOLYLINE
-  5
-E31
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-270.0
- 10
-200.0
- 20
-270.0
-  0
-LWPOLYLINE
-  5
-E32
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-271.0
- 10
-200.0
- 20
-271.0
-  0
-LWPOLYLINE
-  5
-E33
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-199.2
- 20
-272.0
- 10
-200.0
- 20
-272.0
-  0
-LWPOLYLINE
-  5
-E34
-330
-17
-100
-AcDbEntity
-  8
-Default
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-197.0
- 20
-273.0
- 10
-200.0
- 20
-273.0
-  0
-MTEXT
-  5
-E35
 330
 17
 100
@@ -92311,7 +90537,7 @@ Times New Roman_Bold
   0
 LWPOLYLINE
   5
-E36
+DF2
 330
 17
 100
@@ -92337,7 +90563,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-E37
+DF3
 330
 17
 100
@@ -92363,7 +90589,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-E38
+DF4
 330
 17
 100
@@ -92381,15 +90607,15 @@ AcDbPolyline
  10
 190.0
  20
-273.0
+238.0
  10
 372.0
  20
-273.0
+238.0
   0
 LWPOLYLINE
   5
-E39
+DF5
 330
 17
 100
@@ -92407,15 +90633,15 @@ AcDbPolyline
  10
 190.0
  20
-280.0
+245.0
  10
 372.0
  20
-280.0
+245.0
   0
 LWPOLYLINE
   5
-E3A
+DF6
 330
 17
 100
@@ -92437,11 +90663,11 @@ AcDbPolyline
  10
 372.0
  20
-296.0
+261.0
   0
 LWPOLYLINE
   5
-E3B
+DF7
 330
 17
 100
@@ -92459,15 +90685,15 @@ AcDbPolyline
  10
 190.0
  20
-296.0
+261.0
  10
 372.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E3C
+DF8
 330
 17
 100
@@ -92481,7 +90707,7 @@ AcDbMText
  10
 194.0
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92495,7 +90721,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E3D
+DF9
 330
 17
 100
@@ -92517,11 +90743,11 @@ AcDbPolyline
  10
 190.0
  20
-296.0
+261.0
   0
 LWPOLYLINE
   5
-E3E
+DFA
 330
 17
 100
@@ -92543,11 +90769,11 @@ AcDbPolyline
  10
 210.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E3F
+DFB
 330
 17
 100
@@ -92561,7 +90787,7 @@ AcDbMText
  10
 214.25
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92575,7 +90801,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E40
+DFC
 330
 17
 100
@@ -92597,11 +90823,11 @@ AcDbPolyline
  10
 220.5
  20
-296.0
+261.0
   0
 MTEXT
   5
-E41
+DFD
 330
 17
 100
@@ -92615,7 +90841,7 @@ AcDbMText
  10
 224.75
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92629,7 +90855,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E42
+DFE
 330
 17
 100
@@ -92651,11 +90877,11 @@ AcDbPolyline
  10
 231.0
  20
-288.0
+253.0
   0
 LWPOLYLINE
   5
-E43
+DFF
 330
 17
 100
@@ -92673,15 +90899,15 @@ AcDbPolyline
  10
 220.5
  20
-288.0
+253.0
  10
 241.5
  20
-288.0
+253.0
   0
 MTEXT
   5
-E44
+E00
 330
 17
 100
@@ -92695,7 +90921,7 @@ AcDbMText
  10
 235.25
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92709,7 +90935,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E45
+E01
 330
 17
 100
@@ -92731,11 +90957,11 @@ AcDbPolyline
  10
 241.5
  20
-296.0
+261.0
   0
 MTEXT
   5
-E46
+E02
 330
 17
 100
@@ -92749,7 +90975,7 @@ AcDbMText
  10
 245.75
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92763,7 +90989,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E47
+E03
 330
 17
 100
@@ -92785,11 +91011,11 @@ AcDbPolyline
  10
 252.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E48
+E04
 330
 17
 100
@@ -92803,7 +91029,7 @@ AcDbMText
  10
 263.2
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92817,7 +91043,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E49
+E05
 330
 17
 100
@@ -92839,11 +91065,11 @@ AcDbPolyline
  10
 276.4
  20
-296.0
+261.0
   0
 MTEXT
   5
-E4A
+E06
 330
 17
 100
@@ -92857,7 +91083,7 @@ AcDbMText
  10
 305.7
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92871,7 +91097,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E4B
+E07
 330
 17
 100
@@ -92893,11 +91119,11 @@ AcDbPolyline
  10
 337.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E4C
+E08
 330
 17
 100
@@ -92911,7 +91137,7 @@ AcDbMText
  10
 345.0
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92925,7 +91151,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E4D
+E09
 330
 17
 100
@@ -92947,11 +91173,11 @@ AcDbPolyline
  10
 355.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E4E
+E0A
 330
 17
 100
@@ -92965,7 +91191,7 @@ AcDbMText
  10
 358.25
  20
-277.0
+242.0
  30
 0.0
  40
@@ -92979,7 +91205,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E4F
+E0B
 330
 17
 100
@@ -93001,11 +91227,11 @@ AcDbPolyline
  10
 363.5
  20
-288.0
+253.0
   0
 LWPOLYLINE
   5
-E50
+E0C
 330
 17
 100
@@ -93023,15 +91249,15 @@ AcDbPolyline
  10
 355.0
  20
-288.0
+253.0
  10
 372.0
  20
-288.0
+253.0
   0
 MTEXT
   5
-E51
+E0D
 330
 17
 100
@@ -93045,7 +91271,7 @@ AcDbMText
  10
 366.75
  20
-277.0
+242.0
  30
 0.0
  40
@@ -93059,7 +91285,7 @@ Times New Roman
   0
 LWPOLYLINE
   5
-E52
+E0E
 330
 17
 100
@@ -93081,11 +91307,11 @@ AcDbPolyline
  10
 372.0
  20
-296.0
+261.0
   0
 LWPOLYLINE
   5
-E53
+E0F
 330
 17
 100
@@ -93103,15 +91329,15 @@ AcDbPolyline
  10
 200.0
  20
-273.0
+238.0
  10
 200.0
  20
-296.0
+261.0
   0
 MTEXT
   5
-E54
+E10
 330
 17
 100
@@ -93125,7 +91351,7 @@ AcDbMText
  10
 205.0
  20
-277.0
+242.0
  30
 0.0
  40
@@ -93139,7 +91365,7 @@ Times New Roman
   0
 MTEXT
   5
-E55
+E11
 330
 17
 100
@@ -93151,7 +91377,7 @@ AcDbMText
  10
 191.0
  20
-282.0
+247.0
  30
 0.0
  40
@@ -93167,7 +91393,7 @@ Bold
   0
 MTEXT
   5
-E56
+E12
 330
 17
 100
@@ -93179,7 +91405,7 @@ AcDbMText
  10
 201.0
  20
-282.0
+247.0
  30
 0.0
  40
@@ -93195,7 +91421,7 @@ Bold
   0
 MTEXT
   5
-E57
+E13
 330
 17
 100
@@ -93207,7 +91433,7 @@ AcDbMText
  10
 211.0
  20
-280.0
+245.0
  30
 0.0
  40
@@ -93223,7 +91449,7 @@ Bold
   0
 MTEXT
   5
-E58
+E14
 330
 17
 100
@@ -93237,7 +91463,7 @@ AcDbMText
  10
 221.5
  20
-295.0
+260.0
  30
 0.0
  40
@@ -93251,7 +91477,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E59
+E15
 330
 17
 100
@@ -93263,7 +91489,7 @@ AcDbMText
  10
 242.5
  20
-282.0
+247.0
  30
 0.0
  40
@@ -93279,7 +91505,7 @@ Bold
   0
 MTEXT
   5
-E5A
+E16
 330
 17
 100
@@ -93293,7 +91519,7 @@ AcDbMText
  10
 253.0
  20
-295.0
+260.0
  30
 0.0
  40
@@ -93307,7 +91533,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E5B
+E17
 330
 17
 100
@@ -93321,7 +91547,7 @@ AcDbMText
  10
 277.4
  20
-295.0
+260.0
  30
 0.0
  40
@@ -93335,7 +91561,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E5C
+E18
 330
 17
 100
@@ -93349,7 +91575,7 @@ AcDbMText
  10
 338.0
  20
-295.0
+260.0
  30
 0.0
  40
@@ -93363,7 +91589,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E5D
+E19
 330
 17
 100
@@ -93377,7 +91603,7 @@ AcDbMText
  10
 356.0
  20
-296.0
+261.0
  30
 0.0
  40
@@ -93391,7 +91617,7 @@ Times New Roman_Bold
   0
 LWPOLYLINE
   5
-E5E
+E1A
 330
 17
 100
@@ -93409,15 +91635,15 @@ AcDbPolyline
  10
 200.0
  20
-271.0
+237.0
  10
-355.0
+337.0
  20
-271.0
+237.0
   0
 MTEXT
   5
-E5F
+E1B
 330
 17
 100
@@ -93431,7 +91657,7 @@ AcDbMText
  10
 213.0
  20
-273.0
+239.0
  30
 0.0
  40
@@ -93445,7 +91671,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E60
+E1C
 330
 17
 100
@@ -93459,7 +91685,7 @@ AcDbMText
  10
 224.0
  20
-272.0
+238.0
  30
 0.0
  40
@@ -93473,7 +91699,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E61
+E1D
 330
 17
 100
@@ -93487,7 +91713,7 @@ AcDbMText
  10
 224.0
  20
-270.0
+237.0
  30
 0.0
  40
@@ -93501,7 +91727,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E62
+E1E
 330
 17
 100
@@ -93515,7 +91741,7 @@ AcDbMText
  10
 234.0
  20
-273.0
+239.0
  30
 0.0
  40
@@ -93529,7 +91755,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E63
+E1F
 330
 17
 100
@@ -93543,7 +91769,7 @@ AcDbMText
  10
 244.0
  20
-272.0
+238.0
  30
 0.0
  40
@@ -93557,7 +91783,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E64
+E20
 330
 17
 100
@@ -93571,7 +91797,7 @@ AcDbMText
  10
 280.0
  20
-272.0
+238.0
  30
 0.0
  40
@@ -93579,13 +91805,41 @@ AcDbMText
  71
 1
   1
-asfalt
+nan
+  7
+Times New Roman_Bold
+  0
+MTEXT
+  5
+E21
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+100
+AcDbMText
+ 10
+340.0
+ 20
+238.0
+ 30
+0.0
+ 40
+2.1
+ 71
+1
+  1
+MGE-1
   7
 Times New Roman_Bold
   0
 LWPOLYLINE
   5
-E65
+E22
 330
 17
 100
@@ -93603,15 +91857,15 @@ AcDbPolyline
  10
 200.0
  20
-264.0
+233.5
  10
-355.0
+337.0
  20
-264.0
+233.5
   0
 MTEXT
   5
-E66
+E23
 330
 17
 100
@@ -93625,7 +91879,7 @@ AcDbMText
  10
 213.0
  20
-266.0
+235.5
  30
 0.0
  40
@@ -93639,7 +91893,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E67
+E24
 330
 17
 100
@@ -93653,7 +91907,7 @@ AcDbMText
  10
 224.0
  20
-270.0
+237.0
  30
 0.0
  40
@@ -93667,7 +91921,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E68
+E25
 330
 17
 100
@@ -93681,7 +91935,7 @@ AcDbMText
  10
 224.0
  20
-263.0
+233.5
  30
 0.0
  40
@@ -93695,7 +91949,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E69
+E26
 330
 17
 100
@@ -93709,7 +91963,7 @@ AcDbMText
  10
 234.0
  20
-266.0
+235.5
  30
 0.0
  40
@@ -93723,7 +91977,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E6A
+E27
 330
 17
 100
@@ -93737,7 +91991,7 @@ AcDbMText
  10
 244.0
  20
-267.5
+235.25
  30
 0.0
  40
@@ -93751,7 +92005,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E6B
+E28
 330
 17
 100
@@ -93765,7 +92019,7 @@ AcDbMText
  10
 280.0
  20
-267.5
+235.25
  30
 0.0
  40
@@ -93773,13 +92027,41 @@ AcDbMText
  71
 1
   1
-qara torpaq
+nan
+  7
+Times New Roman_Bold
+  0
+MTEXT
+  5
+E29
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+100
+AcDbMText
+ 10
+340.0
+ 20
+235.25
+ 30
+0.0
+ 40
+2.1
+ 71
+1
+  1
+MGE-2
   7
 Times New Roman_Bold
   0
 LWPOLYLINE
   5
-E6C
+E2A
 330
 17
 100
@@ -93797,15 +92079,15 @@ AcDbPolyline
  10
 200.0
  20
-242.0
+222.5
  10
-355.0
+337.0
  20
-242.0
+222.5
   0
 MTEXT
   5
-E6D
+E2B
 330
 17
 100
@@ -93819,7 +92101,7 @@ AcDbMText
  10
 213.0
  20
-244.0
+224.5
  30
 0.0
  40
@@ -93833,7 +92115,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E6E
+E2C
 330
 17
 100
@@ -93847,7 +92129,7 @@ AcDbMText
  10
 224.0
  20
-263.0
+233.5
  30
 0.0
  40
@@ -93861,7 +92143,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E6F
+E2D
 330
 17
 100
@@ -93875,7 +92157,7 @@ AcDbMText
  10
 224.0
  20
-241.0
+222.5
  30
 0.0
  40
@@ -93889,7 +92171,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E70
+E2E
 330
 17
 100
@@ -93903,7 +92185,7 @@ AcDbMText
  10
 234.0
  20
-244.0
+224.5
  30
 0.0
  40
@@ -93917,7 +92199,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E71
+E2F
 330
 17
 100
@@ -93931,7 +92213,7 @@ AcDbMText
  10
 244.0
  20
-253.0
+228.0
  30
 0.0
  40
@@ -93945,7 +92227,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E72
+E30
 330
 17
 100
@@ -93959,7 +92241,7 @@ AcDbMText
  10
 280.0
  20
-253.0
+228.0
  30
 0.0
  40
@@ -93971,9 +92253,37 @@ gil
   7
 Times New Roman_Bold
   0
+MTEXT
+  5
+E31
+330
+17
+100
+AcDbEntity
+  8
+0
+ 62
+5
+100
+AcDbMText
+ 10
+340.0
+ 20
+228.0
+ 30
+0.0
+ 40
+2.1
+ 71
+1
+  1
+MGE-3
+  7
+Times New Roman_Bold
+  0
 LWPOLYLINE
   5
-E73
+E32
 330
 17
 100
@@ -93991,15 +92301,15 @@ AcDbPolyline
  10
 200.0
  20
-228.0
+215.5
  10
-355.0
+337.0
  20
-228.0
+215.5
   0
 MTEXT
   5
-E74
+E33
 330
 17
 100
@@ -94013,7 +92323,7 @@ AcDbMText
  10
 213.0
  20
-230.0
+217.5
  30
 0.0
  40
@@ -94027,7 +92337,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E75
+E34
 330
 17
 100
@@ -94041,7 +92351,7 @@ AcDbMText
  10
 224.0
  20
-241.0
+222.5
  30
 0.0
  40
@@ -94055,7 +92365,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E76
+E35
 330
 17
 100
@@ -94069,7 +92379,7 @@ AcDbMText
  10
 224.0
  20
-227.0
+215.5
  30
 0.0
  40
@@ -94083,7 +92393,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E77
+E36
 330
 17
 100
@@ -94097,7 +92407,7 @@ AcDbMText
  10
 234.0
  20
-230.0
+217.5
  30
 0.0
  40
@@ -94111,7 +92421,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E78
+E37
 330
 17
 100
@@ -94125,7 +92435,7 @@ AcDbMText
  10
 244.0
  20
-235.0
+219.0
  30
 0.0
  40
@@ -94139,7 +92449,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E79
+E38
 330
 17
 100
@@ -94153,7 +92463,7 @@ AcDbMText
  10
 280.0
  20
-235.0
+219.0
  30
 0.0
  40
@@ -94167,7 +92477,7 @@ Times New Roman_Bold
   0
 MTEXT
   5
-E7A
+E39
 330
 17
 100
@@ -94175,111 +92485,83 @@ AcDbEntity
   8
 0
  62
-7
+5
 100
 AcDbMText
  10
-244.0
+340.0
  20
-215.5
+219.0
  30
 0.0
  40
-2.0
+2.1
  71
 1
   1
-2.5
+MGE-4
   7
 Times New Roman_Bold
   0
-MTEXT
+LINE
   5
-E7B
+E3A
 330
 17
 100
 AcDbEntity
   8
-0
+MyLayer
  62
-7
+5
+370
+30
 100
-AcDbMText
+AcDbLine
  10
-234.0
+355.0
  20
-205.0
+231.5
  30
 0.0
- 40
-2.0
- 71
-1
-  1
-7.0
-  7
-Times New Roman_Bold
-  0
-MTEXT
-  5
-E7C
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-7
-100
-AcDbMText
- 10
-213.0
- 20
-205.0
- 30
+ 11
+363.5
+ 21
+231.5
+ 31
 0.0
- 40
-2.0
- 71
-1
-  1
-16.3
-  7
-Times New Roman_Bold
   0
 LWPOLYLINE
   5
-E7D
+E3B
 330
 17
 100
 AcDbEntity
   8
-Default
+0
  62
 5
+370
+30
 100
 AcDbPolyline
  90
 2
  70
 0
- 43
-0.3
  10
 355.0
  20
-260.0
+231.5
  10
 363.5
  20
-260.0
+231.5
   0
 MTEXT
   5
-E7E
+E3C
 330
 17
 100
@@ -94293,7 +92575,7 @@ AcDbMText
  10
 357.5
  20
-263.0
+234.5
  30
 0.0
  40
@@ -94302,398 +92584,6 @@ AcDbMText
 1
   1
 1.3
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E7F
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-355.0
- 20
-260.0
- 10
-363.5
- 20
-260.0
-  0
-MTEXT
-  5
-E80
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-357.5
- 20
-263.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.3
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E81
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-355.0
- 20
-260.0
- 10
-363.5
- 20
-260.0
-  0
-MTEXT
-  5
-E82
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-357.5
- 20
-263.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.3
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E83
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-355.0
- 20
-260.0
- 10
-363.5
- 20
-260.0
-  0
-MTEXT
-  5
-E84
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-357.5
- 20
-263.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-1.3
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E85
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-363.5
- 20
-264.0
- 10
-372.0
- 20
-264.0
-  0
-MTEXT
-  5
-E86
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-366.0
- 20
-267.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-0.9
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E87
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-363.5
- 20
-264.0
- 10
-372.0
- 20
-264.0
-  0
-MTEXT
-  5
-E88
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-366.0
- 20
-267.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-0.9
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E89
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-363.5
- 20
-264.0
- 10
-372.0
- 20
-264.0
-  0
-MTEXT
-  5
-E8A
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-366.0
- 20
-267.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-0.9
-  7
-Times New Roman_Bold
-  0
-LWPOLYLINE
-  5
-E8B
-330
-17
-100
-AcDbEntity
-  8
-Default
- 62
-5
-100
-AcDbPolyline
- 90
-2
- 70
-0
- 43
-0.3
- 10
-363.5
- 20
-264.0
- 10
-372.0
- 20
-264.0
-  0
-MTEXT
-  5
-E8C
-330
-17
-100
-AcDbEntity
-  8
-0
- 62
-5
-100
-AcDbMText
- 10
-366.0
- 20
-267.0
- 30
-0.0
- 40
-2.0
- 71
-1
-  1
-0.9
   7
 Times New Roman_Bold
   0
@@ -95700,8 +93590,6 @@ DICTIONARY
 A
 100
 AcDbDictionary
-280
-1
 281
 1
   3
@@ -95711,7 +93599,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-E8F
+E3F
   0
 DICTIONARYVAR
   5
@@ -95723,11 +93611,11 @@ DictionaryVariables
 280
 0
   1
-1.3.5 @ 2025-03-01T19:03:59.622891+00:00
+1.4.1 @ 2025-05-09T08:27:42.241256+00:00
   0
 DICTIONARYVAR
   5
-E8F
+E3F
 330
 2D
 100
@@ -95735,7 +93623,7 @@ DictionaryVariables
 280
 0
   1
-1.3.5 @ 2025-03-01T19:03:59.679173+00:00
+1.4.1 @ 2025-05-09T08:27:42.319488+00:00
   0
 ENDSEC
   0
