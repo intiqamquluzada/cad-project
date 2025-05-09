@@ -48,3 +48,4 @@ urllib3==2.3.0
 vboxapi==1.0
 Pillow
 virtualenv==20.29.3
+gunicorn
