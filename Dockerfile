@@ -1,7 +1,9 @@
-FROM python:3.10
+FROM python:3.10-bullseye
 
 # Ensure that Python outputs everything that's printed inside
 ENV PYTHONUNBUFFERED 1
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 ENV APP_ROOT /code
 ENV DEBUG False
 
