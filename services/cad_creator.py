@@ -241,7 +241,7 @@ def generate_dxf(path_of_file):
         for index, quyu in enumerate(quyu_layers):
             miqyas = int(1000 / laylar[laylar.iloc[:, 0] == quyu].iloc[0, 10])
             layers = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 1].values
-            mge = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 3]
+            mge = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 3].fillna(" ")
             water = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 4].unique()
             water_qrunt = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 5].unique()
             compositions = laylar[laylar.iloc[:, 0] == quyu].iloc[:, 2].values
@@ -337,7 +337,7 @@ def generate_dxf(path_of_file):
                 y_olcu -= miqyas
             elif olcu % (miqyas / 2) == 0:
                 add_line(msp, (-1.5 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
-            elif olcu % (miqyas / 5) == 0:
+            elif olcu % (miqyas / 10) == 0:
                 add_line(msp, (-0.8 + x_cord_add, y_coord), (0 + x_cord_add, y_coord), bold=True, width=0.3)
 
     def draw_outer_lines(msp, line_length, depth, x_cord_add, miqyas):
@@ -421,27 +421,27 @@ def generate_dxf(path_of_file):
 
             text = round(height - layer, 2)
 
-            if layer == depth:
-                add_text(msp, text, (12 + x_cord_add, y_coord + 2), bold=True)
-                add_text(msp, "{:.1f}".format(previous_layer),
-                         (23 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
-                add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
-                add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, mge, (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
-                add_ellipse(msp, center=(145 + x_cord_add, y_coord_text - 1), major_axis=7, minor_axis=2.6, color=5)
-
+            if layer==depth:
+                add_text(msp,text,(12+x_cord_add,y_coord+2),bold=True)
+                add_text(msp,"{:.1f}".format(previous_layer),(23+x_cord_add,vertical_end-previous_layer*miqyas),bold=True)
+                add_text(msp,"{:.1f}".format(layer),(34+x_cord_add,y_coord+2),bold=True)
+                add_text(msp,"{:.1f}".format(layer-previous_layer),(44+x_cord_add,y_coord_text),bold=True)
+                add_text(msp,mge,(58+x_cord_add,y_coord_text),bold=True,color=5,height=2.1)
+                add_ellipse(msp, center=(63+x_cord_add,y_coord_text-1), major_axis=7, minor_axis=2.6, color=5)
+                add_text(msp,composition,(80+x_cord_add,y_coord_text),bold=True)
+    
+    
             else:
-                add_line(msp, start=(0 + x_cord_add, y_coord), end=(137 + x_cord_add, y_coord), bold=True)
-                add_text(msp, text, (12 + x_cord_add, y_coord + 2), bold=True)
-                add_text(msp, "{:.1f}".format(previous_layer),
-                         (23 + x_cord_add, vertical_end - previous_layer * miqyas), bold=True)
-                add_text(msp, "{:.1f}".format(layer), (23 + x_cord_add, y_coord), bold=True)
-                add_text(msp, "{:.1f}".format(layer), (34 + x_cord_add, y_coord + 2), bold=True)
-                add_text(msp, "{:.1f}".format(layer - previous_layer), (44 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, composition, (80 + x_cord_add, y_coord_text), bold=True)
-                add_text(msp, mge, (140 + x_cord_add, y_coord_text), bold=True, color=5, height=2.1)
-                add_ellipse(msp, center=(145 + x_cord_add, y_coord_text - 1), major_axis=7, minor_axis=2.6, color=5)
+                add_line(msp, start=(0+x_cord_add, y_coord), end=(137+x_cord_add, y_coord),bold=True)
+                add_text(msp,text,(12+x_cord_add,y_coord+2),bold=True)
+                add_text(msp,"{:.1f}".format(previous_layer),(23+x_cord_add,vertical_end-previous_layer*miqyas),bold=True)
+                add_text(msp,"{:.1f}".format(layer),(23+x_cord_add,y_coord),bold=True)
+                add_text(msp,"{:.1f}".format(layer),(34+x_cord_add,y_coord+2),bold=True)
+                add_text(msp,"{:.1f}".format(layer-previous_layer),(44+x_cord_add,y_coord_text),bold=True)
+                add_text(msp,mge,(58+x_cord_add,y_coord_text),bold=True,color=5,height=2.1)
+                add_ellipse(msp, center=(63+x_cord_add,y_coord_text-1), major_axis=7, minor_axis=2.6, color=5)            
+                add_text(msp,composition,(80+x_cord_add,y_coord_text),bold=True)
+
             previous_layer = layer
         y_coord_text = vertical_end - miqyas * (depth - (depth - layer) / 2)
         # add_text(msp,"{:.1f}".format(depth-previous_layer),(44+x_cord_add,y_coord_text),bold=True)
